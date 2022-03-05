@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(230, 234, 240);
+}
+.menuButtons {
+    background-color:  rgb(185, 207, 240);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h3 {
+    color: black;
+}
