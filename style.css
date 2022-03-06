@@ -76,3 +76,21 @@ body {
 #siteDescrip {
     font-size: 20px;
 }
+#popupTexas {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    max-width: 40%;
+    height: auto;
+    max-height: 40%;
+    width: auto;
+}
+#popupX {
+    position: absolute;
+    top: 23.5%;
+    left: 77.5%;
+    background-color:rgb(185, 207, 240);
+    width: 2%;
+    text-align: center;
+    height: 4%;
+}
