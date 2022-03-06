@@ -1,6 +1,9 @@
+/* Body Styling */
 body {
     background-color: rgb(230, 234, 240);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Austin_Texas_Lake_Front.jpg/1200px-Austin_Texas_Lake_Front.jpg?20120929001517);
 }
+/* Menu Bar Styling */
 .menuButtons {
     background-color:  rgb(185, 207, 240);
     display: flex;
@@ -9,4 +12,37 @@ body {
 }
 h3 {
     color: black;
+}
+/* Search Styling */
+.searchLabel {
+    color: white;
+    background-color: rgba(92, 117, 156, 0.75);
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 0px;
+}
+.homeSearch {
+    background-color: rgba(92, 117, 156, 0.75);
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+.searchDropdown {
+    text-align: center;
+    background-color:rgb(185, 207, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-radius: 3px;
+    height: 50px;
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+#searchIcon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(92, 117, 156, 0.75);
 }
