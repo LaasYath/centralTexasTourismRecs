@@ -4,17 +4,10 @@ function hidePopup () {
     boxes.forEach(box => {
         box.style.visibility = 'hidden';
     });
-
-    // setMenu();
 }
 
-// function setMenu() {
-//     var home = document.getElementById("homeButton");
-//     home.style.backgroundColor = rgb(104, 159, 241); 
-// }
-
-function resultsPage() {
-    window.open("http://127.0.0.1:5500/resultsFiles/results.html");
+function browsePage() {
+    window.open("http://127.0.0.1:5500/browseFiles/browse.html");
 }
 
 function contactPage() {

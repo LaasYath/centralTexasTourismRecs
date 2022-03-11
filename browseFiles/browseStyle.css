@@ -1,0 +1,65 @@
+/* Body Styling */
+body {
+    background-color: rgb(230, 234, 240);
+}
+
+/* Menu Bar Styling */
+.menuButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuButtons button {
+    background-color: rgb(185, 207, 240);
+    color: black;
+    border-style: solid;
+    border-width: 3px;
+    width: 25%;
+    height: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#pageButton {
+   background-color: rgb(104, 159, 241); 
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Heading Sytling */
+#heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Distance Filter Styling */
+.distanceDropdown select {
+    text-align: center;
+    width: 75%;
+    height: 20px;
+    background-color:rgb(185, 207, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#searchIcon {
+    width: 1.5%;
+    height: 18px;
+    background-image: url("https://lh3.googleusercontent.com/EthUfcMk07gpCE5Bn-iWjDIooQ4RZritEBhWZZ3cprjZai_LSHEQz3JrITv8VX2-4IHw7tsHxm1qH0Uyd4w_70UkRIyvR_orsyJGyK3FV_x3sYB4WV46xiDm9AZxeGUO4ooQe3bg=w2400");
+    background-size: cover;
+}
+/* Zipcode Input Styling */
+#zipInput {
+    margin-bottom: 3px;
+}
+
+/* Line Breaks */
+.filters {
+    border-style: solid;
+    border-left: 1px black;
+    float: left;
+    padding-right: 10px;
+    margin: 10px;
+    border-bottom: none;
+    border-top: none;
+}
