@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="functions.js"></script>
+    <link rel="stylesheet" href="homeStyle.css">
+    <script src="homeFunctions.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central Texas Tourism Reccomendations!</title>
+    <title> HOME | Central Texas Tourism Reccomendations!</title>
 </head>
 <body>
     <div class="menuButtons">
-        <h3> HOME </h3>
-        <h3> CONTACT </h3>
-        <h3> FAQ </h3>
-        <h3> ABOUT </h3>
+        <button type="button" id="homeButton"> HOME </button>
+        <button type="button" onClick="contactPage()"> CONTACT </button>
+        <button type="button" onClick="faqPage()"> FAQ </button>
+        <button type="button" onClick="aboutPage()"> ABOUT </button>
     </div>
         
     <h2 class="searchLabel"> Search </h2>
@@ -27,7 +27,7 @@
             <option value="family"> Family </option>
             <option value="miscellaneous"> Miscellaneous </option>
         </select>
-        <img id="searchIcon" src="https://lh3.googleusercontent.com/EthUfcMk07gpCE5Bn-iWjDIooQ4RZritEBhWZZ3cprjZai_LSHEQz3JrITv8VX2-4IHw7tsHxm1qH0Uyd4w_70UkRIyvR_orsyJGyK3FV_x3sYB4WV46xiDm9AZxeGUO4ooQe3bg=w2400" alt="Search Icon">
+        <button type="button" id="searchIcon" onClick="resultsPage()">  </button>
     </div>
 
     <div class="popup">
