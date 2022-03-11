@@ -1,5 +1,7 @@
-// function hidePopup() {
-//     var input = document.getElementById("popupX");
-//     // input.style.display = "none";
-//     input.style.visibility="hidden";
-// }
+function hidePopup () {
+    const boxes = Array.from(document.getElementsByClassName('popup'));
+
+    boxes.forEach(box => {
+        box.style.visibility = 'hidden';
+    });
+}

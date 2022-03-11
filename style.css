@@ -60,7 +60,7 @@ body {
 }
 
 /* Popup styling */
-.popupTitle {
+#popupTitle {
     position: absolute;
     top: 25%;
     left: 19%;
