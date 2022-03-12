@@ -63,3 +63,13 @@ body {
     border-bottom: none;
     border-top: none;
 }
+
+/* Filter Dropdown */
+.searchFilter select {
+    text-align: center;
+    width: 10%;
+    height: 25px;
+    background-color:rgb(185, 207, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}

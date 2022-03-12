@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="contactStyle.css">
+    <script src="contactFunctions.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> CONTACT | Central Texas Tourism Reccomendations! </title>
 </head>
 <body>
-    
+    <div class="menuButtons">
+        <button type="button" onClick="homePage()"> HOME </button>
+        <button type="button" onClick="browsePage()"> BROWSE </button>
+        <button type="button" id="pageButton"> CONTACT </button>
+        <button type="button" onClick="faqPage()"> FAQ </button>
+        <button type="button" onClick="aboutPage()"> ABOUT </button>
+    </div>
+
+    <div>
+        <h2 id="heading"> Contact </h2>
+        <div class="contactBlurb">
+            <p> Please fill out this form if you have any questions or comments and someone on our team will get back to your shortly!</p>
+            <p> <b> * </b> Required </p>
+        </div>
+    </div>
+
+    <div class="emailForm">
+        <form action="contactForm.php" method="post">
+            <label for="name"> Name: </label>
+            <div>
+                <input type="text" name="name" class="shortAnswer">
+            </div>
+            <label for="userEmail"> Email: <b> * </b> </label>
+            <div>
+                <input type="email" name="userEmail" class="shortAnswer" required>
+            </div>
+            <label for="message"> Message: <b> * </b> </label>
+            <div>
+                <textarea name="message" id="messageBox" rows="8" columns="25" required> </textarea>
+            </div>
+        </form>
+    </div>
+
+    <div id="send">
+        <button type="button"> SEND </button>
+    </div>
 </body>
 </html>
