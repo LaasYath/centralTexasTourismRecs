@@ -26,3 +26,58 @@ body {
    background-color: rgb(104, 159, 241); 
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+/* Heading */
+#heading {
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#aboutBlurb {
+    width: 50%;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+/* Content */
+.diffTypes {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+#imgLeft {
+    float: left;
+    width: 30%;
+    height: 120px;
+}
+
+#imgRight {
+    float: right;
+    width: 30%;
+    height: 120px;
+}
+
+.left {
+    margin-top: 5px;
+    float: left;
+    padding-left: 15px;
+    width: 67%;
+    text-align: justify;
+}
+
+.right {
+    margin-top: 5px;
+    float: right;
+    padding-right: 15px;
+    width: 67%;
+    text-align: justify;
+}
+
+.descrips {
+    font-weight: normal;
+}

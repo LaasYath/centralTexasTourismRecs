@@ -26,3 +26,43 @@ body {
    background-color: rgb(104, 159, 241); 
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+/* Heading */
+#heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#faqBlurb {
+    text-align: justify;
+    width: 33%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* Questions */
+.questions {
+    text-align: center;
+    width: 70%;
+    margin: auto
+}
+
+.questions p {
+    text-align: justify;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.questions h4 {
+    text-align: left;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.questions ul {
+    text-align: left;
+    width: 70%;
+    margin: auto;
+}
