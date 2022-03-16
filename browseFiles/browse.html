@@ -30,24 +30,20 @@
         <div class="priceFilter">
             <div class="priceCheckboxes">
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="price25">
-                    <label for="price25"> $0 - $25 </label>
+                    <input type="checkbox" name="price0" id="test" onClick="changeRecs(this)">
+                    <label for="price0"> Free</label>
                 </div>
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="price50">
-                    <label for="price50"> $26 - $50 </label>
+                    <input type="checkbox" name="priceLow" onClick="changeRecs(this)">
+                    <label for="priceLow"> $ </label>
                 </div>
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="price75">
-                    <label for="price75"> $51 - $75 </label>
+                    <input type="checkbox" name="priceMid" onClick="changeRecs(this)">
+                    <label for="priceMid"> $$ </label>
                 </div>
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="price100">
-                    <label for="price100"> $76 - $100 </label>
-                </div>
-                <div class="priceCheckboxes">
-                    <input type="checkbox" name="price100+">
-                    <label for="price100+"> $100+ </label>
+                    <input type="checkbox" name="priceHigh" onClick="changeRecs(this)">
+                    <label for="priceHigh"> $$$ </label>
                 </div>
             </div>
         </div>

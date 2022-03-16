@@ -73,3 +73,13 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 10px;
 }
+
+.checked {
+    width: 30px;
+    height: 30px;
+}
+
+.unchecked {
+    width: 15px;
+    height: 15px;
+}
