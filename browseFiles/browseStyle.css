@@ -83,3 +83,7 @@ body {
     width: 15px;
     height: 15px;
 }
+
+.fbox {
+    display:flexbox;
+}
