@@ -11,24 +11,9 @@
 <body>
     <div class="menuButtons">
         <button type="button" id="pageButton"> <a href="http://localhost:5500/homeFiles/home.html"> HOME </a> </button>
-        <button type="button"> <a href="http://localhost:81/browse.php"> BROWSE </a> </button>
+        <button type="button"> <a href="http://localhost:81/browse.php"> ATTRACTIONS </a> </button>
         <button type="button"> <a href="http://localhost:81/contactForm.php"> CONTACT </a> </button>
         <button type="button"> <a href="http://localhost:5500/faqFiles/faq.html"> FAQ </a> </button>
-        <button type="button"> <a href="http://localhost:5500/aboutFiles/about.html"> ABOUT </a> </button>
-    </div>
-        
-    <h2 class="searchLabel"> Search </h2>
-    <div class="homeSearch">
-        <label for="type"></label>
-        <select name="type" class="searchDropdown">
-            <option value=""> Search By...</option>
-            <option value="history"> History </option>
-            <option value="music"> Music </option>
-            <option value="dining"> Dining </option>
-            <option value="family"> Family </option>
-            <option value="miscellaneous"> Miscellaneous </option>
-        </select>
-        <button type="button" id="searchIcon" onClick="browsePage()">  </button>
     </div>
 
     <div class="popup">
@@ -46,6 +31,32 @@
             <img id="popupTexas"src="https://www.maxpixel.net/static/photo/2x/United-States-America-State-Geography-Map-Texas-43792.png" width="10%">
             <input id="popupX" type="button" value="&#x2715" onClick="hidePopup()">
         </div>
+    </div>
+
+    <div id = "shading">
+        <h2> Welcome to Central Texas! </h2>
+        <p id="aboutBlurb"> This is your one stop site for finding fun things to do in Central Texas! 
+            Find a variety of different attractions, from museums to rodeos, all right here! You can 
+            even filter by price, location, and distance! Get started by heading over to our 
+            <a id="blurbLink" href="http://localhost:81/browse.php"> ATTRACTIONS </a> page!
+        </p>
+
+        <img id="imgLeft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/TexasStateCapitol-2010-01.JPG/1200px-TexasStateCapitol-2010-01.JPG?20100821134114">
+        <h4 class="left"> History </h4>
+        <p class="descrips"> From the Mexican Revolution, to where we are today, Central Texas is embedded with
+        history. 
+        Find a variety of museums commemorating heroes and artists, and stop by the Texas State Capitol
+        in Austin! </p>
+
+        <img id="imgLeft" src="https://austinpartybusrental.com/wp-content/uploads/2021/08/acl-live-feature-edited.jpg" width: 50%;>
+        <h4 class="left"> Music </h4>
+        <p class="descrips"> Austin is the live music capitol of the world
+        so be ready for some crazy concerts! </p> 
+
+        <img id="imgLeft" src="https://upload.wikimedia.org/wikipedia/commons/7/74/GeorgetownParksBH.jpg?20110219135358">
+        <h4 class="left"> Fun </h4>
+        <p class="descrips"> Strap in for some fun at one of Central Texas'
+        many parks! Go kayaking, fishing, or swimming with the whole family! </p> 
     </div>
 </body>
 </html>

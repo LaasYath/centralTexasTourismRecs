@@ -28,41 +28,6 @@ body {
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/* Search Styling */
-.searchLabel {
-    color: white;
-    background-color: rgba(92, 117, 156, 0.75);
-    text-align: center;
-    width: 40%;
-    margin: auto;
-    margin-top: 15%;
-}
-.homeSearch {
-    background-color: rgba(92, 117, 156, 0.75);
-    text-align: center;
-    width: 40%;
-    margin: auto;
-}
-.searchDropdown {
-    text-align: center;
-    background-color:rgb(185, 207, 240);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-style: solid;
-    border-radius: 3px;
-    width: 60%;
-    height: 50px;
-    margin-bottom: 10px;
-    font-size: 20px;
-
-}
-#searchIcon {
-    width: 5%;
-    height: 25px;
-    background-image: url("https://lh3.googleusercontent.com/EthUfcMk07gpCE5Bn-iWjDIooQ4RZritEBhWZZ3cprjZai_LSHEQz3JrITv8VX2-4IHw7tsHxm1qH0Uyd4w_70UkRIyvR_orsyJGyK3FV_x3sYB4WV46xiDm9AZxeGUO4ooQe3bg=w2400");
-    background-size: cover;
-    padding: 0px;
-}
-
 /* Popup styling */
 #popupTitle {
     position: absolute;
@@ -97,4 +62,37 @@ body {
     width: 2%;
     text-align: center;
     height: 4%;
+}
+/* Heading */
+#aboutBlurb {
+    text-align: justify;
+}
+
+#blurbLink {
+    color: white;
+}
+
+/* Content */
+#imgLeft {
+    float: left;
+    height: 120px;
+}
+
+.left {
+    text-align: left;
+}
+
+.descrips {
+    text-align: justify;
+}
+
+#shading {
+    width: 60%;
+    margin: auto;
+    margin-top: 15px;
+    color: white;
+    background-color: rgba(92, 117, 156, 0.8);
+    padding: 3%;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
