@@ -1,24 +1,8 @@
 <?php
 
 // establishing connection
-$dbServerName = "localhost:3307";
-$dbUserName = "root";
-$dbPwd = "root";
-$dbName = "mysql";
+include "browseConnection.php";
 
-$conn = new mysqli($dbServerName, $dbUserName, $dbPwd, $dbName);
-
-if ($conn->connect_error) {
-    die('Connect Error (' . 
-    $conn->connect_errno . ') '. 
-    $conn->connect_error);
-} else {
-    echo "connected";
-}
-
-// Gets all of the data from attractions set
-$sql = "SELECT * FROM attractions ";
-$result = $conn->query($sql);
 ?>
 
 <!-- Start of html Portion -->
@@ -26,7 +10,6 @@ $result = $conn->query($sql);
 <html lang="en">
 <head>
     <link rel="stylesheet" href="browseStyle.css">
-    <script src="browseFunctions.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,158 +19,151 @@ $result = $conn->query($sql);
 
     <!-- Menu Bar - Change into Links! -->
     <div class="menuButtons">
-        <button type="button" onClick="homePage()"> HOME </button>
-        <button type="button" id="pageButton"> BROWSE </button>
-        <button type="button" onClick="contactPage()"> CONTACT </button>
-        <button type="button" onClick="faqPage()"> FAQ </button>
-        <button type="button" onClick="aboutPage()"> ABOUT </button>
+            <button type="button"> <a href="http://localhost:5500/homeFiles/home.html"> HOME </a> </button>
+            <button type="button" id="pageButton"> <a href="http://localhost:81/browse.php"> BROWSE </a> </button>
+            <button type="button"> <a href="http://localhost:81/contactForm.php"> CONTACT </a> </button>
+            <button type="button"> <a href="http://localhost:5500/faqFiles/faq.html"> FAQ </a> </button>
+            <button type="button"> <a href="http://localhost:5500/aboutFiles/about.html"> ABOUT </a> </button>
     </div>
 
     <div>
         <h2 id="heading"> Attractions </h2>
+        <p id="blurb"> To display recommendations, make sure to select your preferences using the bar to the left! </p>
         <hr>
     </div>
 
     <!-- Checkboxes/Filter Options -->
-    <form action = "browseRecs.php">
+    <form action = "browse.php" method="post">
     <div class="filters">
-        <h3> Price <button type="button" onClick="displayPrices()"> + </button></h3>
+        <h3> Price <button type="button" onClick="displayPrice()"> + </button></h3> </h3>
         <div class="priceFilter">
-            <div class="priceCheckboxes">
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="price0" value="0">
+                    <input type="checkbox" name="price0" value="0" class="priceCheckboxes">
                     <label for="price0"> Free</label>
                 </div>
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="priceLow" onClick="changeRecs(this)">
+                    <input type="checkbox" name="priceLow" value="20" class="priceCheckboxes">
                     <label for="priceLow"> $ </label>
                 </div>
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="priceMid" onClick="changeRecs(this)">
+                    <input type="checkbox" name="priceMid" value="50" class="priceCheckboxes">
                     <label for="priceMid"> $$ </label>
                 </div>
                 <div class="priceCheckboxes">
-                    <input type="checkbox" name="priceHigh" onClick="changeRecs(this)">
+                    <input type="checkbox" name="priceHigh" value="1000" class="priceCheckboxes">
                     <label for="priceHigh"> $$$ </label>
                 </div>
-            </div>
         </div>
+
+
 
         <h3> Location <button type="button" onClick="displayLocations()"> + </button></h3>
         <div class="locationFilter">
-            <div class="locationCheckboxes">
-                <div class="typeCheckboxes">
-                <input type="checkbox" name="austin">
+                <div class="locationCheckboxes">
+                <input type="checkbox" name="Austin" value="Austin" class="locationCheckboxes">
                     <label for="austin"> Austin </label>
                 </div>
                 <div class="locationCheckboxes">
-                    <input type="checkbox" name="roundrock">
+                    <input type="checkbox" name="Round_Rock" value="Round Rock" class="locationCheckboxes">
                     <label for="roundrock"> Round Rock </label>
                 </div>
                 <div class="locationCheckboxes">
-                    <input type="checkbox" name="georgetown">
+                    <input type="checkbox" name="Georgetown" value="Georgetown" class="locationCheckboxes">
                     <label for="georgetown"> Georgetown </label>
                 </div>
-            </div>
         </div>
 
         <h3> Environment <button type="button" onClick="displayEnvt()"> + </button></h3>
         <div class="envtFilter">
-            <div class="envtCheckboxes">
-                <div class="typeCheckboxes">
-                <input type="checkbox" name="indoor">
+                <div class="envtCheckboxes">
+                <input type="checkbox" name="Indoor" value="Indoor" class="envtCheckboxes">
                     <label for="indoor"> Indoor </label>
                 </div>
                 <div class="envtCheckboxes">
-                    <input type="checkbox" name="outdoor">
+                    <input type="checkbox" name="Outdoor" value="Outdoor" class="envtCheckboxes">
                     <label for="outdoor"> Outdoor </label>
                 </div>
-            </div>
         </div>
 
         <h3> Type <button type="button" onClick="displayTypes()"> + </button></h3>
         <div class="typeFilter">
-            <div class="typeCheckboxes">
                 <div class="typeCheckboxes">
-                <input type="checkbox" name="history">
+                <input type="checkbox" name="history" value="history" class="typeCheckboxes">
                     <label for="history"> History </label>
                 </div>
                 <div class="typeCheckboxes">
-                    <input type="checkbox" name="music">
+                    <input type="checkbox" name="music" value="music" class="typeCheckboxes">
                     <label for="music"> Music </label>
                 </div>
                 <div class="typeCheckboxes">
-                    <input type="checkbox" name="dining">
+                    <input type="checkbox" name="dining" value="dining" class="typeCheckboxes">
                     <label for="dining"> Dining </label>
                 </div>
                 <div class="typeCheckboxes">
-                    <input type="checkbox" name="family">
+                    <input type="checkbox" name="family" value="family" class="typeCheckboxes">
                     <label for="family"> Family </label>
                 </div>
                 <div class="typeCheckboxes">
-                    <input type="checkbox" name="misc">
+                    <input type="checkbox" name="misc" value="misc" class="typeCheckboxes">
                     <label for="misc"> Miscellaneous </label>
                     <!-- includes fishing, farming, rodeos, shopping, parks-->
                 </div>
-            </div>
         </div>
 
-        <h3> Distance <button type="button" onClick="displayDistance()"> + </button></h3>
-        <div class="distanceFilter">
-            <input id="zipInput" type="text" placeholder="Enter Zipcode">
-            <div class="distanceDropdown">
-                <label for="miles"></label>
-                <select name="miles" class="searchDropdown">
-                    <option value="5"> Under 5 miles </option>
-                    <option value="10"> Under 10 miles </option>
-                    <option value="10+"> 10+ Miles </option>
-                </select>
-                <button type="button" id="searchIcon"> </button>
+        <h3> Mask Protocols <button type="button" onClick="displayDistance()"> + </button></h3>
+        <div class="maskFilter">
+            <div class="maskCheckboxes">
+                <input type="checkbox" name="required" value="required" class="maskCheckboxes">
+                <label for="required"> Required </label>
+                <br>
+                <input type="checkbox" name="recommended" value="recommended" class="maskCheckboxes">
+                <label for="recommended"> Recommended </label>
+                <br>
+                <input type="checkbox" name="optional" value="optional" class="maskCheckboxes">
+                <label for="optional"> Optional </label>
+                <br>
+                <br>
             </div>
         </div>
+        <button type="submit" name="submit"> Update Preferences </button>
+        <br>
+        <br>
+        <hr>
     </div>
-    <input type="submit" name="submitBtn">
-    <label for="submitBtn"> Change Preferences </label>
-</from>
+</form>
 
-    <!-- Results side -->
-    <div>
-        <div class="searchFilter">
-            <label for="type"></label>
-            <select name="type" class="searchDropdown">
-                <option value=""> Filter By...</option>
-                <option value="history"> History </option>
-                <option value="music"> Music </option>
-                <option value="dining"> Dining </option>
-                <option value="family"> Family </option>
-                <option value="miscellaneous"> Miscellaneous </option>
-            </select>
-            <button type="button" id="searchIcon" onClick="resultsPage()">  </button>
-        </div>
-    </div>
-
-    <div class="results">
-        <!-- Making of table -->
-        <table>
-            <tr>
-                <th> Name </th>
-                <th> Blurb </th>
-                <th> Details </th>
-            </tr>
-            <!-- Usse php to fetch data -->
-            <?php
-                while($rows=$result->fetch_assoc()) {
-            ?>
-            <tr>
-                <td> <?php echo $result['name'] . "<br>"; ?> </td>
-                
-                </tr>
-            <?php
-                }
-            ?>
-        </table>
-            </div>
+<script type="text/javascript">
+    function query
+</script>
 
 
 </body>
 </html>
+
+<?php
+
+    $boxes = array('price0', 'priceLow', 'priceMid', 'priceHigh',
+                   'Austin', 'Round_Rock', 'Georgetown',
+                   'Indoor', 'Outdoor', 
+                   'history', 'music', 'dining', 'family', 'misc');
+
+    $prefer = array();
+
+    foreach($boxes as $box) {
+        if(isset($_POST[$box])) {
+            array_push($prefer, $box);
+        }
+    }
+
+    foreach($boxes as $box) {
+        if(isset($_POST[$box])) {
+?> <script>
+            document.getElementsByName("<?php $box ?>").checked = "true";
+</script>
+<?php
+            array_push($prefer, $box);
+        }
+    }
+?>
+ 
+
