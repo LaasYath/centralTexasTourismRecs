@@ -16,6 +16,11 @@ include "browseConnection.php";
     <title> BROWSE | Central Texas Tourism Reccomendations! </title>
 </head>
 <body>
+    <script> 
+        function clearTable() {
+            $('#resultsTable').detach();
+        }
+    </script>
 
     <!-- Menu Bar - Change into Links! -->
     <div class="menuButtons">
@@ -110,7 +115,7 @@ include "browseConnection.php";
                 </div>
         </div>
 
-        <h3> Mask Protocols <button type="button" onClick="displayDistance()"> + </button></h3>
+        <h3> Mask Protocols <button type="button" onClick="displayMask()"> + </button></h3>
         <div class="maskFilter">
             <div class="maskCheckboxes">
                 <input type="checkbox" name="required" value="required" class="maskCheckboxes">
@@ -132,13 +137,26 @@ include "browseConnection.php";
     </div>
 </form>
 
-<script type="text/javascript">
-    function query
-</script>
-
-
-</body>
-</html>
+<table id="resultsTable">
+    <th> Name </th>
+    <th> Blurb </th>
+    <?php 
+        $allQuery = 'SELECT * FROM attractions';
+        $results = $conn->query($allQuery);
+        while ($rows=$results->fetch_assoc()) {
+    ?>
+            <tr> 
+                <td> <a href= <?php $rows['link'] ?> > <?php echo $rows['name'] ?> </a> </td>
+                <td> <?php echo $rows['blurb'] ?> </td>
+            </tr>
+            <tr> 
+                <td> <hr> </td>
+                <td> <hr> </td>
+            </tr>
+    <?php
+        }
+    ?>
+</table>
 
 <?php
 
@@ -155,15 +173,17 @@ include "browseConnection.php";
         }
     }
 
-    foreach($boxes as $box) {
-        if(isset($_POST[$box])) {
-?> <script>
-            document.getElementsByName("<?php $box ?>").checked = "true";
-</script>
-<?php
-            array_push($prefer, $box);
-        }
+    if(count($prefer) != 0) {
+        echo '<script type="text/JavaScript"> 
+            document.getElementById(\'resultsTable\').remove();
+            </script>'
+        ;
     }
+    
 ?>
+
+
+</body>
+</html>
  
 
