@@ -2,6 +2,7 @@
 body {
     background-color: rgb(230, 234, 240);
 }
+
 /* Menu Bar Styling */
 .menuButtons {
     display: flex;
@@ -23,8 +24,8 @@ body {
 }
 
 #pageButton {
-   background-color: rgb(104, 159, 241); 
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgb(104, 159, 241); 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Heading */
@@ -33,37 +34,53 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#faqBlurb {
-    text-align: justify;
+.contactBlurb {
+    text-align: center;
     width: 33%;
     margin: auto;
-    margin-bottom: 10px;
 }
 
-/* Questions */
-.questions {
+b {
+    color: red;
+}
+
+/* Form styling */
+#formName {
     text-align: center;
-    width: 70%;
-    margin: auto
+    width: 50%;
+    margin: auto;
 }
 
-.questions p {
-    text-align: justify;
-    width: 70%;
+input {
+    text-align: center;
+    width: 49%;
     margin: auto;
+    margin-top: 5px;
     margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.questions h4 {
-    text-align: left;
-    width: 70%;
+.emailForm {
+    text-align: center;
     margin: auto;
-    margin-bottom: 5px;
+    font-size: 15px;
 }
 
-/* Questions List */
-.questions ul {
-    text-align: left;
-    width: 70%;
-    margin: auto;
+#emailMessage {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Keeps astrisk on appropriate line */
+p {
+    display: inline;
+}
+
+#required {
+    display: block;
 }

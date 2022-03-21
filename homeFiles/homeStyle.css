@@ -29,13 +29,14 @@ body {
 }
 
 /* Popup styling */
+/* Text */
 #popupTitle {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 19%;
     text-align: left;
     width: 60%;
-    height: 400px;
+    height: 465px;
     background-color: rgb(85, 149, 250);
     margin: auto;
     font-size: 25px;
@@ -45,24 +46,27 @@ body {
 #siteDescrip {
     font-size: 20px;
 }
+/* Texas Image */
 #popupTexas {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 45%;
     max-width: 40%;
     height: auto;
     max-height: 40%;
     width: auto;
 }
+/* Exit Button */
 #popupX {
     position: absolute;
-    top: 25.5%;
+    top: 15.5%;
     left: 77.5%;
     background-color:rgb(185, 207, 240);
     width: 2%;
     text-align: center;
     height: 4%;
 }
+
 /* Heading */
 #aboutBlurb {
     text-align: justify;
@@ -72,12 +76,13 @@ body {
     color: white;
 }
 
-/* Content */
+/* Blurbs */
 #imgLeft {
     float: left;
     height: 120px;
 }
 
+/* Shifts titles to the left */
 .left {
     text-align: left;
 }
@@ -86,6 +91,7 @@ body {
     text-align: justify;
 }
 
+/* Background Box */
 #shading {
     width: 60%;
     margin: auto;

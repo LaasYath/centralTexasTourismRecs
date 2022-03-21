@@ -34,26 +34,17 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Distance Filter Styling */
-.distanceDropdown select {
+#blurb {
     text-align: center;
-    width: 75%;
-    height: 20px;
-    background-color:rgb(185, 207, 240);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-#searchIcon {
-    width: 1.5%;
-    height: 18px;
-    background-image: url("https://lh3.googleusercontent.com/EthUfcMk07gpCE5Bn-iWjDIooQ4RZritEBhWZZ3cprjZai_LSHEQz3JrITv8VX2-4IHw7tsHxm1qH0Uyd4w_70UkRIyvR_orsyJGyK3FV_x3sYB4WV46xiDm9AZxeGUO4ooQe3bg=w2400");
-    background-size: cover;
-}
-/* Zipcode Input Styling */
-#zipInput {
-    margin-bottom: 3px;
 }
 
-/* Line Breaks */
+/* Preference Buttons */
+.preferButtons {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 90%;
+}
+
+/* Vertical Line Break */
 .filters {
     border-style: solid;
     border-left: 1px black;
@@ -64,26 +55,8 @@ body {
     border-top: none;
 }
 
-/* Filter Dropdown */
-.searchFilter select {
-    text-align: center;
-    width: 10%;
-    height: 25px;
-    background-color:rgb(185, 207, 240);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 10px;
+/* Table Styling */ 
+#resultsTable {
+    table-layout: fixed;
 }
 
-.checked {
-    width: 30px;
-    height: 30px;
-}
-
-.unchecked {
-    width: 15px;
-    height: 15px;
-}
-
-.fbox {
-    display:flexbox;
-}
