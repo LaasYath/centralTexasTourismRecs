@@ -53,44 +53,24 @@ The `FAQ` page displays frequently asked questions with answers and links to use
 - [Brushy Creek Trail] (https://www.roundrocktexas.gov/city-departments/parks-and-recreation/parks-and-trails/trails/)
 - [Old Settlers Park Trail] (https://www.roundrocktexas.gov/city-departments/parks-and-recreation/parks-and-trails/trails/)
 - [Gourdoughs] (https://gourdoughs.com/)
-Chilantro
-https://www.chilantrobbq.com/
-Biscuits + Groovy
-https://iwantbiscuits.com/
-Chuy’s
-https://www.chuys.com/locations/austin/round-rock
-Bad Larry Burger Club
-https://www.instagram.com/badlarryburgerclub/?hl=en
-Iron Works BBQ
-https://www.ironworksbbq.com/
-Launderette
-https://launderetteaustin.com/
-Hillside Farmacy
-http://hillsidefarmacy.com/
-Lakeline Mall
-https://www.simon.com/mall/lakeline-mall
-The Domain
-https://www.simon.com/mall/the-domain
-Barton Springs Pool
-https://www.austintexas.gov/department/barton-springs-pool
-Barton Creek Square
-https://www.simon.com/mall/barton-creek-square
-Zip Lost Pines
-https://ziplostpines.com/
-Rodeo Austin
-https://rodeoaustin.com/
-ACL Live
-https://acl-live.com/
-Emo’s Austin
- https://www.emosaustin.com/
-Scoot Inn Austin
-https://scootinnaustin.com/
-Georgetown Palace Theatre
-https://www.georgetownpalace.com/
-Blue Hole Park
-https://parks.georgetown.org/blue-hole/
-
-
+- [Chilantro] (https://www.chilantrobbq.com/)
+- [Biscuits + Groovy] (https://iwantbiscuits.com/)
+- [Chuy’s] (https://www.chuys.com/locations/austin/round-rock)
+- [Bad Larry Burger Club] (https://www.instagram.com/badlarryburgerclub/?hl=en)
+- [Iron Works BBQ] (https://www.ironworksbbq.com/)
+- [Launderette] (https://launderetteaustin.com/)
+- [Hillside Farmacy] (http://hillsidefarmacy.com/)
+- [Lakeline Mall] (https://www.simon.com/mall/lakeline-mall)
+- [The Domain] (https://www.simon.com/mall/the-domain)
+- [Barton Springs Pool] (https://www.austintexas.gov/department/barton-springs-pool)
+- [Barton Creek Square] (https://www.simon.com/mall/barton-creek-square)
+- [Zip Lost Pines] (https://ziplostpines.com/)
+- [Rodeo Austin] (https://rodeoaustin.com/)
+- [ACL Live] (https://acl-live.com/)
+- [Emo’s Austin] ( https://www.emosaustin.com/)
+- [Scoot Inn Austin] (https://scootinnaustin.com/)
+- [Georgetown Palace Theatre] (https://www.georgetownpalace.com/)
+- [Blue Hole Park] (https://parks.georgetown.org/blue-hole/)
 
 ### Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the local authorities and government of Texas or any of its subsidiaries or its affiliates. Related names, marks, emblems and images are registered trademarks of their respective owners.
