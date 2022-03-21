@@ -86,3 +86,9 @@ The `FAQ` page displays frequently asked questions with answers and links to use
 ### Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the local authorities and government of Texas or any of its subsidiaries or its affiliates. Related names, marks, emblems and images are registered trademarks of their respective owners.
 
+### License
+- [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License] (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+### Contributors
+- Laasya Yatham
+
