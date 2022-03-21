@@ -72,12 +72,16 @@ The `FAQ` page displays frequently asked questions with answers and links to use
 - [Georgetown Palace Theatre] (https://www.georgetownpalace.com/)
 - [Blue Hole Park] (https://parks.georgetown.org/blue-hole/)
 
-#### Home Images
-- [Austin Image (Stuart Seeger - flickr - CC BY-2.0)] (https://commons.wikimedia.org/wiki/File:Austin_Texas_Lake_Front.jpg)
-- 
+#### FAQ Links
+- [Expedia] (https://www.expedia.com/)
+- [Tripadvisor] (https://www.tripadvisor.com/)
+- [Trivago] (https://www.trivago.com/)
 
-####
-- 
+#### Home Images
+- [Background Image of Austin (Stuart Seeger - flickr - CC BY 2.0)] (https://commons.wikimedia.org/wiki/File:Austin_Texas_Lake_Front.jpg)
+- [History Image of Texas State Capitol (LoneStarMike - Own Work - CC BY 3.0)] (https://commons.wikimedia.org/wiki/File:TexasStateCapitol-2010-01.JPG)
+- [Music Image of ACL Concert (Austin Pary Bus Rental - WikiMedia Commons CC BY 3.0)] (https://creativecommons.org/licenses/by/3.0/us/)
+- [Fun Image of Lake Georgetown Park (Austex - Own Work - CC BY SA 3.0)] (https://commons.wikimedia.org/wiki/File:GeorgetownParksBH.jpg)
 
 ### Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the local authorities and government of Texas or any of its subsidiaries or its affiliates. Related names, marks, emblems and images are registered trademarks of their respective owners.
