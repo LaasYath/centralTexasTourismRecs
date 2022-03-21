@@ -17,11 +17,11 @@ The `Contact` page can be used to send an email to our team. General inquires ab
 ### FAQ
 The `FAQ` page displays frequently asked questions with answers and links to useful resources.
 
-### Sources
-#### Attraction Links
+#### Sources
+##### Attraction Links
 - [Inner Space Caverns] (https://innerspacecavern.com/)
 
 
-### Disclaimer
+#### Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the local authorities and government of Texas or any of its subsidiaries or its affiliates. Related names, marks, emblems and images are registered trademarks of their respective owners.
 
