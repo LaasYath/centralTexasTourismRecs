@@ -72,6 +72,13 @@ The `FAQ` page displays frequently asked questions with answers and links to use
 - [Georgetown Palace Theatre] (https://www.georgetownpalace.com/)
 - [Blue Hole Park] (https://parks.georgetown.org/blue-hole/)
 
+#### Home Images
+- [Austin Image (Stuart Seeger - flickr - CC BY-2.0)] (https://commons.wikimedia.org/wiki/File:Austin_Texas_Lake_Front.jpg)
+- 
+
+####
+- 
+
 ### Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the local authorities and government of Texas or any of its subsidiaries or its affiliates. Related names, marks, emblems and images are registered trademarks of their respective owners.
 
