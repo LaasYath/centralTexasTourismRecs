@@ -43,13 +43,13 @@
         <!-- Email Sent Confirmation & Error Messages-->
         <p> 
 			<?php 
-				if ($_SERVER['REQUEST_URI'] == "/contactForm.php?mailsent") {
+				if ($_SERVER['REQUEST_URI'] == "/contactFiles/contactForm.php?mailsent") {
 					echo "Mail Sent!";
-				} else if ($_SERVER['REQUEST_URI'] == "/contactForm.php?errorRequired") {
+				} else if ($_SERVER['REQUEST_URI'] == "/contactFiles/contactForm.php?errorRequired") {
 					echo "Please fill out all required fields before submitting";
-				} else if ($_SERVER['REQUEST_URI'] == "/contactForm.php?errorChars") {
+				} else if ($_SERVER['REQUEST_URI'] == "/contactFiles/contactForm.php?errorChars") {
 					echo "Name accepts letters and whitespace characters only.";
-				} else if ($_SERVER['REQUEST_URI'] == "/contactForm.php?errorEmail") {
+				} else if ($_SERVER['REQUEST_URI'] == "/contactFiles/contactForm.php?errorEmail") {
 					echo "Please enter a valid email.";
 				}
             ?> 
