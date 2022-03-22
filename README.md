@@ -83,6 +83,20 @@ The `FAQ` page displays frequently asked questions with answers and links to use
 - [Music Image of ACL Concert (Austin Pary Bus Rental - WikiMedia Commons CC BY 3.0)] (https://creativecommons.org/licenses/by/3.0/us/)
 - [Fun Image of Lake Georgetown Park (Austex - Own Work - CC BY SA 3.0)] (https://commons.wikimedia.org/wiki/File:GeorgetownParksBH.jpg)
 
+### Tools & Softwares Used
+- Visual Studio Code
+- Node.js
+- MAMP
+- phpMyAdmin
+- hMailServer
+- Github
+- Github Desktop
+- Javascript
+- PHP
+- MySQL
+- HTML
+- CSS
+
 ### Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the local authorities and government of Texas or any of its subsidiaries or its affiliates. Related names, marks, emblems and images are registered trademarks of their respective owners.
 
