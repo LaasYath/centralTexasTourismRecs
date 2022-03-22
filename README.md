@@ -9,10 +9,10 @@ This website is dynamic, and allows users to browse for attractions. They can th
 The `Home` page describes what the website and Central Texas have to offer as well as navigation for the user. The menu bar located at the top of the page allows users to quickly move through the different parts of the website.
 
 ### Attractions
-The `Attractions` page displays various attractions. Using the bar to the left, users can select checkboxes to filter their results. Make sure to click the `Update Preferences` button at the bottom of the bar in order for your selection to work. When you select a checkbox, all activities of that type will be displayed, regardless of the other preferences chosen. Located underneath the `Update Preferences` button, there is also the `Clear Preferences` button to clear your selection.
+The `Attractions` page displays various attractions. Using the bar to the left, users can select checkboxes to filter their results. Make sure to click the `Update Preferences` button at the bottom of the bar in order for your selection to work. When you select a checkbox, all activities of that type will be displayed, regardless of the other preferences chosen. Located underneath the `Update Preferences` button, there is also the `Clear Preferences` button to clear your selection. On the page itself, you will see a table containing a list of all the desired attracions. In the `Name` column, there are clickable links to all of the activities' official websites. In the `Details` column, you should see a quick blurb about the attrction as well as more information corresponding to the filters.
 
 ### Contact
-The `Contact` page can be used to send an email to our team. General inquires about attractions and the user's visit are welcome. The web page also passes the information securely, so there is no need to worry aobut your information being open to malicious hackers. Error messages will display below the `Send Mail` button if the input does not meet requirements.
+The `Contact` page can be used to send an email to our team. General inquires about attractions and the user's visit are welcome. The web page also passes the information securely, so there is no need to worry aobut user's information being open to malicious hackers. Error messages will display below the `Send Mail` button if the input does not meet requirements.
 
 ### FAQ
 The `FAQ` page displays frequently asked questions with answers and links to useful resources.
