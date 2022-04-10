@@ -23,7 +23,7 @@ The `Contact` page can be used to send an email to our team. General inquiries a
 ### FAQ
 The `FAQ` page displays frequently asked questions with answers and links to useful resources.
 
-![faqPage.PNG]
+![](faqPage.PNG)
 
 ## Sources
 ### Attraction Links
