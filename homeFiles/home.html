@@ -8,34 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> HOME | Central Texas Tourism Reccomendations!</title>
 </head>
-<body>
+<body id="body">
     <!-- Menu Bar Buttons (Links to other pages) -->
     <div class="menuButtons">
         <button type="button" id="pageButton"> <a href="http://localhost:5500/homeFiles/home.html"> HOME </a> </button>
-        <button type="button"> <a href="http://localhost:82/browseFiles/browse.php"> ATTRACTIONS </a> </button>
+        <button type="button"> <a href="http://localhost:81/browseFiles/browse.php"> ATTRACTIONS </a> </button>
         <button type="button"> <a href="http://localhost:81/contactFiles/contactForm.php"> CONTACT </a> </button>
         <button type="button"> <a href="http://localhost:5500/faqFiles/faq.html"> FAQ </a> </button>
-    </div>
-
-    <!-- 'Welcome To Central Texas' Opening Pop Up  -->
-    <div class="popup">
-        <!-- Text -->
-        <div id="popupTitle">
-            <h2> WELCOME </h2>
-            <h2> TO </h2>
-            <h2> CENTRAL </h2>
-            <h2> TEXAS! </h2>
-            <br>
-            <p id="siteDescrip"> This is your one stop site for finding fun things to do in Central Texas!
-                You'll find dining, rich history, wonder in the great outdoors, and so much more! Get started
-                right now!
-            </p>
-        </div>
-
-        <!-- Texas Image -->
-        <img id="popupTexas"src="https://www.maxpixel.net/static/photo/2x/United-States-America-State-Geography-Map-Texas-43792.png" width="10%">
-        <!-- Exit Button -->
-        <input id="popupX" type="button" value="&#x2715" onClick="hidePopup()">
     </div>
 
     <!-- About Texas, Endorsing the Website -->
@@ -68,6 +47,27 @@
         <h4 class="left"> Fun </h4>
         <p class="descrips"> Strap in for some fun at one of Central Texas'
         many parks! Go kayaking, fishing, or swimming with the whole family! </p> 
+    </div>
+
+    <!-- 'Welcome To Central Texas' Opening Pop Up  -->
+    <div class="popup">
+        <!-- Text -->
+        <div id="popupTitle">
+            <h2> WELCOME </h2>
+            <h2> TO </h2>
+            <h2> CENTRAL </h2>
+            <h2> TEXAS! </h2>
+            <br>
+            <p id="siteDescrip"> This is your one stop site for finding fun things to do in Central Texas!
+                You'll find dining, rich history, wonder in the great outdoors, and so much more! Get started
+                right now!
+            </p>
+        </div>
+
+        <!-- Texas Image -->
+        <img id="popupTexas"src="https://www.maxpixel.net/static/photo/2x/United-States-America-State-Geography-Map-Texas-43792.png">
+        <!-- Exit Button -->
+        <input id="popupX" type="button" value="&#x2715" onClick="hidePopup()">
     </div>
 </body>
 </html>

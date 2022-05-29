@@ -37,7 +37,7 @@
         } 
     ?>
 
-    <!-- Menu Bar - Change into Links! -->
+    <!-- Menu Bar - Links -->
     <div class="menuButtons">
         <button type="button"> <a href="http://localhost:5500/homeFiles/home.html"> HOME </a> </button>
         <button type="button" id="pageButton"> <a href="http://localhost:81/browseFiles/browse.php"> ATTRACTIONS </a> </button>
