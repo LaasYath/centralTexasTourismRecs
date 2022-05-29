@@ -40,7 +40,10 @@ body {
     background-color: rgb(85, 149, 250);
     font-size: 25px;
     padding: 5px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-width: 8px;
+    border-style: outset;
+    border-color: rgb(230, 234, 240);
+    box-shadow: 0px 0px 75px 300px rgba(0,0,0,0.4), 0px 0px 75px 300px rgba(0,0,0,0.4);
 }
 
 #siteDescrip {
@@ -59,13 +62,14 @@ body {
 /* Exit Button */
 #popupX {
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 77.5%;
     background-color:rgb(185, 207, 240);
     width: 2%;
     text-align: center;
     height: 4%;
 }
+
 
 /* Heading */
 #aboutBlurb {
@@ -94,9 +98,9 @@ body {
 /* Background Box */
 #shading {
     top: 65px;
-    left: 16.5%;
+    left: 9%;
     position: absolute;
-    width: 60%;
+    width: 75%;
     color: white;
     background-color: rgba(92, 117, 156, 0.8);
     padding: 3%;
