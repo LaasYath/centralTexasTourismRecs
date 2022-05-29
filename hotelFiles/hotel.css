@@ -1,0 +1,39 @@
+/* Body Styling */
+body {
+    background-color: rgb(230, 234, 240);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Austin_Texas_Lake_Front.jpg/1200px-Austin_Texas_Lake_Front.jpg?20120929001517);
+}
+/* Menu Bar Styling */
+.menuButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#homeLogo {
+    width: 35%;
+    height: 90%;
+}
+
+.menuButtons button {
+    background-color: rgb(185, 207, 240);
+    color: black;
+    border-style: solid;
+    border-width: 3px;
+    width: 25%;
+    height: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Un-underline links */
+a {
+    text-decoration: none;
+}
+
+#pageButton {
+   background-color: rgb(104, 159, 241); 
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

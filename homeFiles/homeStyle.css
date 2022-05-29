@@ -28,6 +28,11 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Un-underline links */
+a {
+    text-decoration: none;
+}
+
 #pageButton {
    background-color: rgb(104, 159, 241); 
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
