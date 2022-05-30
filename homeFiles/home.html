@@ -21,7 +21,7 @@
     <!-- About Texas, Endorsing the Website -->
     <div id = "shading">
         <!-- Blurb about website -->
-        <h2> Welcome to Central Texas! </h2>
+        <h2 id="title"> Welcome to Central Texas! </h2>
         <p id="aboutBlurb"> This is your one stop site for finding fun things to do in Central Texas! 
             Find a variety of different attractions, from museums to rodeos, all right here! You can 
             even filter by price, location, and distance! Get started by heading over to our 
@@ -30,12 +30,18 @@
 
         <!-- Blurbs Contain image, title, and quick description of category-->
         <!-- History Blurb -->
-        <img id="imgLeft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/TexasStateCapitol-2010-01.JPG/1200px-TexasStateCapitol-2010-01.JPG?20100821134114">
+        <!-- <img id="imgLeft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/TexasStateCapitol-2010-01.JPG/1200px-TexasStateCapitol-2010-01.JPG?20100821134114">
         <h4 class="left"> History </h4>
         <p class="descrips"> From the Mexican Revolution, to where we are today, Central Texas is embedded with
         history. 
         Find a variety of museums commemorating heroes and artists, and stop by the Texas State Capitol
-        in Austin! </p>
+        in Austin! </p> -->
+        <div onmouseover="changeColor(this)" onmouseout="changeBack(this)"  id="historyTopic">
+            <img id="histImg" class="topicImgs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/TexasStateCapitol-2010-01.JPG/1200px-TexasStateCapitol-2010-01.JPG?20100821134114">
+            <!-- <canvas id="histCanvas"> </canvas> -->
+            <h4 id="histTitle" >  History </h4>
+            <p class="descrips"> From the Mexican Revolution, to where we are today, Central Texas is embedded with history. Find a variety of museums commemorating heroes and artists, and stop by the Texas State Capitol in Austin! </p>
+        </div>
 
         <!-- Music Blurb -->
         <img id="imgLeft" src="https://austinpartybusrental.com/wp-content/uploads/2021/08/acl-live-feature-edited.jpg" width: 50%;>

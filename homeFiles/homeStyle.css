@@ -53,7 +53,7 @@ a {
     border-width: 8px;
     border-style: outset;
     border-color: rgb(230, 234, 240);
-    box-shadow: 0px 0px 75px 300px rgba(0,0,0,0.4), 0px 0px 75px 300px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 75px 300px rgba(0,0,0,0.6), 0px 0px 75px 300px rgba(0,0,0,0.6);
 }
 
 #siteDescrip {
@@ -82,6 +82,10 @@ a {
 
 
 /* Heading */
+#title {
+    text-align: center;
+}
+
 #aboutBlurb {
     text-align: justify;
 }
@@ -90,30 +94,66 @@ a {
     color: white;
 }
 
-/* Blurbs */
-#imgLeft {
-    float: left;
-    height: 120px;
-}
-
-/* Shifts titles to the left */
-.left {
-    text-align: left;
-}
-
-.descrips {
-    text-align: justify;
-}
-
 /* Background Box */
 #shading {
     top: 65px;
-    left: 9%;
+    left: 5%;
     position: absolute;
-    width: 75%;
+    width: 84%;
     color: white;
     background-color: rgba(92, 117, 156, 0.8);
     padding: 3%;
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+/* Areas to Explore */
+/* General */
+.topicImgs {
+    width:100%;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+.descrips {
+    position: relative;
+    font-size: 18px;
+    text-align: justify;
+    margin: 1%;
+}
+
+
+/* History */
+#histTitle {
+    position: absolute;
+    top: 5%;
+    margin-left: 10%;
+    margin-top: 8%;
+    border-bottom-style: solid;
+    border-width: 4px;
+    border-color: rgb(85, 149, 250);
+    font-size: 30px;
+    text-shadow: 2px 2px rgb(85, 149, 250);
+}
+
+#historyTopic {
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    width: 30%;
+    background-color:rgb(104, 159, 241);
+}
+
+/* Blurbs */
+/* #imgLeft {
+    float: left;
+    height: 120px;
+} */
+
+/* Shifts titles to the left
+ .left {
+    text-align: left;
+}
+*/
+
