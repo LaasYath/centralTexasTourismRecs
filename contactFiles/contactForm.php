@@ -10,7 +10,7 @@
 <body>
     <!-- Meny Buttons (Link to Other Pages) -->
     <div class="menuButtons">
-        <button type="button"> <a href="http://localhost:5500/homeFiles/home.html"> <img id="homeLogo" src="webLogo.png" alt="Logo"> </a> </button>
+        <button type="button"> <a href="http://localhost:81/homeFiles/home.php"> <img id="homeLogo" src="webLogo.png" alt="Logo"> </a> </button>
         <button type="button"> <a href="http://localhost:81/browseFiles/browse.php"> ATTRACTIONS </a> </button>
         <button type="button"> <a href="http://localhost:81/hotelFiles/hotel.php"> PLACES TO STAY </a> </button>
 		<button type="button" id="pageButton"> <a href="http://localhost:81/contactFiles/contactForm.php"> CONTACT </a> </button>
