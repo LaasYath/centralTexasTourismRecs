@@ -33,6 +33,12 @@
         <h2> Upcoming Events </h2>
     </div>
 
+    <div class="shading">
+    <?php
+        echo "hi";
+    ?>
+    </div>
+
     <div class="sectTitles">
         <h2> Things To Explore </h2>
     </div>
