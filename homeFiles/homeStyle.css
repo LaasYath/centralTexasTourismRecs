@@ -1,13 +1,11 @@
 /* Body Styling */
 body {
-    background-color: rgb(230, 234, 240);
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Austin_Texas_Lake_Front.jpg/1200px-Austin_Texas_Lake_Front.jpg?20120929001517);
 }
 /* Menu Bar Styling */
 .menuButtons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 #homeLogo {
@@ -17,7 +15,6 @@ body {
 
 .menuButtons button {
     background-color: rgb(185, 207, 240);
-    color: black;
     border-style: solid;
     border-width: 3px;
     width: 25%;
@@ -36,6 +33,108 @@ a {
 #pageButton {
    background-color: rgb(104, 159, 241); 
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Heading */
+/* Background Box */
+#blurb {
+    top: 65px;
+    margin-left: 5%;
+    width: 84%;
+    margin-top: 2%;
+    color: white;
+    background-color: rgb(185, 207, 240, 0.9);
+    padding: 3%;
+    padding-bottom: 1%;
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+#title {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color:rgb(85, 149, 250);
+    text-decoration-thickness: 4px;
+    font-size: 42px;
+    text-shadow: 2px 4px rgb(85, 149, 250);
+}
+
+#aboutBlurb {
+    text-align: justify;
+}
+
+#blurbLink {
+    color: indigo;
+}
+
+/* Section Styling */
+.sectTitles {
+    position: relative;
+    margin-left: 5%;
+    width: 90%;
+    color: white;
+    background-color: rgb(185, 207, 240, 0.9);
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 0px;
+    text-decoration: underline;
+    text-decoration-color:rgb(85, 149, 250);
+    text-decoration-thickness: 4px;
+    font-size: 25px;
+    text-shadow: 2px 2px rgb(85, 149, 250);
+}
+
+.shading {
+    margin-left: 5%;
+    position: relative;
+    width: 86%;
+    color: white;
+    background-color: rgb(185, 207, 240, 0.9);
+    padding: 3%;
+    padding-top: 0%;
+    padding-right: 2%;
+    padding-left: 2%;
+    display: inline-flex;
+}
+
+.topics {
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(230, 234, 240);
+    margin: 1%;
+    width: 100%;
+    background-color:rgb(104, 159, 241);
+    /* overflow-wrap: break-word; */
+    overflow: hidden;
+}
+
+.topicImgs {
+    width:100%;
+    height: 65%;
+    border-bottom-style: solid;
+    border-color: rgb(230, 234, 240);
+    border-width: 3px;
+}
+
+.descrips {
+    position: relative;
+    font-size: 18px;
+    text-align: justify;
+    margin: 1%;
+}
+
+.topicTitles {
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    margin-top: 0.5px;
+    margin-left: 5px;
+    text-decoration: underline;
+    text-decoration-color:rgb(85, 149, 250);
+    text-decoration-thickness: 4px;
+    text-shadow: 2px 2px rgb(85, 149, 250);
+    font-size: 21.8px;
+    top: 7%;
 }
 
 /* Popup styling */
@@ -79,120 +178,3 @@ a {
     text-align: center;
     height: 4%;
 }
-
-
-/* Heading */
-#title {
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color:rgb(85, 149, 250);
-    text-decoration-thickness: 4px;
-    text-shadow: 2px 4px rgb(85, 149, 250);
-}
-
-#aboutBlurb {
-    text-align: justify;
-}
-
-#blurbLink {
-    color: white;
-}
-
-/* Background Box */
-#blurb {
-    top: 65px;
-    margin-left: 5%;
-    width: 84%;
-    margin-top: 2%;
-    color: white;
-    background-color: rgb(185, 207, 240, 0.9);
-    padding: 3%;
-    padding-bottom: 1%;
-    padding-top: 10px;
-    margin-bottom: 0px;
-}
-
-/* Section Title Styling */
-.sectTitles {
-    margin-left: 5%;
-    width: 90%;
-    color: white;
-    background-color: rgb(185, 207, 240, 0.9);
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: 0px;
-}
-.sectTitles h2 {
-    text-decoration: underline;
-    text-decoration-color:rgb(85, 149, 250);
-    text-decoration-thickness: 4px;
-    font-size: 28px;
-    text-shadow: 2px 2px rgb(85, 149, 250);
-}
-
-.shading {
-    margin-left: 5%;
-    position: absolute;
-    width: 85%;
-    color: white;
-    background-color: rgb(185, 207, 240, 0.9);
-    padding: 3%;
-    padding-top: 0%;
-    padding-right: 1%;
-    display: inline-flex;
-}
-
-/* Areas to Explore */
-/* General */
-.topics {
-    border-style: solid;
-    border-width: 3px;
-    border-color: rgb(230, 234, 240);
-    width: 30%;
-    margin: 1%;
-    background-color:rgb(104, 159, 241);
-}
-
-.topicImgs {
-    width:100%;
-    height: 65%;
-    border-bottom-style: solid;
-    border-color: rgb(230, 234, 240);
-    border-width: 3px;
-}
-
-.descrips {
-    position: relative;
-    font-size: 18px;
-    text-align: justify;
-    margin: 1%;
-}
-
-.titles {
-    position: absolute;
-    text-align: left;
-    margin-top: 0.5px;
-    margin-left: 5px;
-    border-bottom-style: solid;
-    border-width: 4px;
-    border-color: rgb(85, 149, 250);
-    font-size: 30px;
-    text-shadow: 2px 2px rgb(85, 149, 250);
-}
-
-/* History */
-#histTitle {
-    top: 7%;
-}
-
-/* Music */
-#musicTitle {
-    top: 7%;
-}
-
-/* Fun */
-#funTitle {
-    top: 7%;
-}
-
