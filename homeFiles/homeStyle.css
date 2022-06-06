@@ -25,6 +25,11 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Search Styling */
+#searchBar {
+    padding: 10px;
+}
+
 /* Un-underline links */
 a {
     text-decoration: none;
