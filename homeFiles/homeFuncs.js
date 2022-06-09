@@ -4,10 +4,9 @@ function hidePopup () {
 
     boxes.forEach(box => {
         box.style.visibility = 'hidden';
+        body.style.overflowX = "scroll";
+        body.style.overflowY = "scroll";
     });
-
-    var shadow = document.getElementsByClassName("dark");
-    shadow.style.visibility = "hidden";
 }
 
 // function changeColor(item) {
@@ -36,12 +35,12 @@ function hidePopup () {
 // Change topic text when hovered
 function changeTxt(item) {
     item.style.color = "white";
-    item.style.border = "3px inset rgb(230, 234, 240)";
+    item.style.border = "2px inset rgb(230, 234, 240)";
 }
 
 function changeTxtBack(item) {
     item.style.color = "black";
-    item.style.border = "3px solid rgb(230, 234, 240)";
+    item.style.border = "2px solid black";
 }
 
 // Changes menu buttons when hovered
@@ -56,7 +55,7 @@ function changeBgBack(item) {
         item.style.background= "rgb(104, 159, 241)";
     }
     else {
-        item.style.background = "rgb(228, 235, 247)";
+        item.style.background = "rgb(185, 207, 240)";
     }
     item.style.border = "3px solid black";
 }

@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="homeStyle.css">
-    <script src="homeFunctions.js"></script>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css" media="screen">
+    <script src="homeFuncs.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +21,10 @@
         <button onmouseover="changeBg(this)" onmouseout="changeBgBack(this)" type="button"> <a href="http://localhost:81/hotelFiles/hotel.php"> PLACES TO STAY </a> </button>
         <button onmouseover="changeBg(this)" onmouseout="changeBgBack(this)" type="button"> <a href="http://localhost:81/contactFiles/contactForm.php"> CONTACT </a> </button>
         <button onmouseover="changeBg(this)" onmouseout="changeBgBack(this)" type="button"> <a href="http://localhost:5500/faqFiles/faq.html"> FAQ </a> </button> 
+        <form action="search.php" method="POST">
+            <input title="Type Activity, Location, Price, Zipcode, Date, etc." id="search" type="text" name="searchBar" placeholder="Search...">
+            <button title="Type Activity, Location, Price, Zipcode, Date, etc." onmouseover="changeBg(this)" onmouseout="changeBgBack(this)" type="submit" id="submit" name="submitSearch">  </button>
+        </form>
     </div>
 
     <!-- Heading: About Texas, Endorsing the Website -->
@@ -48,7 +52,7 @@
                 <div onmouseover="changeTxt(this)" onmouseout="changeTxtBack(this)"  class="topics">
                     <img class="topicImgs" src= <?php echo $rows["img"] ?>>
                     <h4 class="topicTitles" > <?php echo $rows["name"] ?> </h4>
-                    <p class="descrips"> <?php echo $rows["descrip"] ?> </p>
+                    <p class="descrips"> <?php echo $rows["blurb"] ?> </p>
                 </div>
         <?php
             }
@@ -77,13 +81,44 @@
             <p class="descrips"> Austin is the live music capitol of the world so be ready for some crazy concerts! </p>
         </div>
 
-        <!-- Fun Blurb -->
+        <!-- Dining Blurb -->
+        <div onmouseover="changeTxt(this)" onmouseout="changeTxtBack(this)"  class="topics">
+            <img class="topicImgs" src="https://live.staticflickr.com/4095/4784481028_6cdc631306_b.jpg">
+            <!-- <canvas id="musicCanvas"> </canvas> -->
+            <h4 id="funTitle" class="topicTitles">  Dining </h4>
+            <p class="descrips"> Southern food is a staple of our culture here in Texas. Experience the taste of your favorite classic dishes from the best! </p>
+        </div> 
+    </div>
+        <br>
+
+    <div class="shading">
+
+        <!-- Family Blurb -->
+        <div onmouseover="changeTxt(this)" onmouseout="changeTxtBack(this)"  class="topics">
+            <img class="topicImgs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Inner_Space_Cavern_2016.jpg/1200px-Inner_Space_Cavern_2016.jpg?20170101085837">
+            <!-- <canvas id="musicCanvas"> </canvas> -->
+            <h4 id="funTitle" class="topicTitles">  Family </h4>
+            <p class="descrips"> Find fun things to do for the whole family with kid, teen, and adult friendly activities! </p>
+        </div> 
+
+        <!-- Shopping Blurb -->
+        <div onmouseover="changeTxt(this)" onmouseout="changeTxtBack(this)"  class="topics">
+            <img class="topicImgs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Domain_phase_2.jpg/1200px-Domain_phase_2.jpg?20120822233121">
+            <!-- <canvas id="musicCanvas"> </canvas> -->
+            <h4 id="funTitle" class="topicTitles">  Shopping </h4>
+            <p class="descrips"> Who doesn't love shopping? Whether you prefer outlet malls, modern shops, or small boutiques, Central Texas is booming with businesses that are sure to surprise you! </p>
+        </div> 
+
+        <!-- Outdoors Blurb -->
         <div onmouseover="changeTxt(this)" onmouseout="changeTxtBack(this)"  class="topics">
             <img class="topicImgs" src="https://upload.wikimedia.org/wikipedia/commons/7/74/GeorgetownParksBH.jpg?20110219135358">
             <!-- <canvas id="musicCanvas"> </canvas> -->
-            <h4 id="funTitle" class="topicTitles">  Fun </h4>
+            <h4 id="funTitle" class="topicTitles">  Outdoors </h4>
             <p class="descrips"> Strap in for some fun at one of Central Texas' many parks! Go kayaking, fishing, or swimming with the whole family!</p>
         </div> 
+    </div>
+
+    <div id="dark" class="popup">
     </div>
 
     <!-- 'Welcome To Central Texas' Opening Pop Up  -->
@@ -102,9 +137,22 @@
         </div>
 
         <!-- Texas Image -->
-        <img id="popupTexas"src="https://www.maxpixel.net/static/photo/2x/United-States-America-State-Geography-Map-Texas-43792.png">
+        <img id="popupTexas" src="logoImg.png">
         <!-- Exit Button -->
         <input id="popupX" type="button" value="&#x2715" onClick="hidePopup()">
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bottomBar">
+        <hr>
+        <div>
+            <img id="bottomLogo" class="bBar" src="webLogo.png" alt="Logo">
+        </div>
+        <div id="helpLinks" class="bBar">
+            <h2 > Sitemap </h2>
+            <h2> About </h2>
+            <h2> Privacy Policy </h2>
+        </div>
     </div>
 </body>
 </html>
