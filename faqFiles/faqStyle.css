@@ -77,3 +77,99 @@ a {
     width: 70%;
     margin: auto;
 }
+
+/* Bottom Bar */
+.bottomBar1 {
+    background-color: rgb(104, 159, 241);
+    display: inline-block;
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.barSect {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+} 
+
+#bottomLogo {
+    width: 300px;
+    padding: 0px;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#helpLinks {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#helpLinks button {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+    text-align: left;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 2%;
+}
+
+#helpLinks button:hover {
+    border-style: inset;
+}
+
+#first {
+    width: 250px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    padding: 0px;
+    margin: 0px;
+    line-height: 60px;
+    font-size: 15px;
+}
+
+#second {
+    width: 200px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    padding: 0px;
+    margin: 0px;
+    line-height: 60px;
+    font-size: 15px;
+}
+#third {
+    width: 150px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    line-height: 60px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#helpLinks button {
+    margin-right: 3px;
+}
+
+.bottomBar2 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: aboslute;
+    float: right;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    background-color: rgb(104, 159, 241);
+}
+.bottomBAr {
+    display: inline-block;
+}
