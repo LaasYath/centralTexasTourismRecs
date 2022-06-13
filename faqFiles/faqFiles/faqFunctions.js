@@ -1,4 +1,4 @@
 function view(item) {
-    var answer = document.getElementById(item);
-    answer.style.display = "block";
+    // var answer = document.getElementById(item);
+    item.style.display = "none";
 }

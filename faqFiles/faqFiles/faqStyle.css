@@ -86,7 +86,7 @@ a {
     width: 70%;
     margin: auto;
     margin-bottom: 20px;
-    display: none;
+    display: inline;
 }
 
 .questions h4 {
