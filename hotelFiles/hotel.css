@@ -1,7 +1,6 @@
 /* Body Styling */
 body {
     background-color: rgb(230, 234, 240);
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Austin_Texas_Lake_Front.jpg/1200px-Austin_Texas_Lake_Front.jpg?20120929001517);
 }
 /* Menu Bar Styling */
 .menuButtons {
@@ -28,6 +27,30 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Sarch Bar */
+.menuButtons form {
+    background-color: rgb(185, 207, 240);
+    border-style: solid;
+    border-width: 3px;
+    width: 25%;
+    height: 44px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#submit {
+    width: 23%;
+    height: 44px;
+    float: right;
+}
+#search {
+    height: 38px;
+    width: 73%;
+    float: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* Un-underline links */
 a {
     text-decoration: none;
@@ -36,4 +59,141 @@ a {
 #pageButton {
    background-color: rgb(104, 159, 241); 
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Heading Sytling */
+#heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#blurb {
+    text-align: center;
+}
+
+/* Preference Buttons */
+.preferButtons {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 90%;
+}
+
+/* Vertical Line Break */
+.filters {
+    border-style: solid;
+    border-left: 1px black;
+    float: left;
+    padding-right: 10px;
+    margin: 10px;
+    border-bottom: none;
+    border-top: none;
+}
+
+/* Filters Styling */ 
+#locOptions {
+    display: block;
+}
+
+#rateOptions {
+    display: block;
+}
+
+/* Table Styling */ 
+#resultsTable {
+    table-layout: fixed;
+}
+
+/* Bottom Bar */
+.bottomBar1 {
+    background-color: rgb(104, 159, 241);
+    display: inline-block;
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.barSect {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+} 
+
+#bottomLogo {
+    width: 300px;
+    padding: 0px;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#helpLinks {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#helpLinks button {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+    text-align: left;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 2%;
+}
+
+#helpLinks button:hover {
+    border-style: inset;
+}
+
+#first {
+    width: 250px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    padding: 0px;
+    margin: 0px;
+    line-height: 60px;
+    font-size: 15px;
+}
+
+#second {
+    width: 200px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    padding: 0px;
+    margin: 0px;
+    line-height: 60px;
+    font-size: 15px;
+}
+#third {
+    width: 150px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    line-height: 60px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#helpLinks button {
+    margin-right: 3px;
+}
+
+.bottomBar2 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: aboslute;
+    float: right;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    background-color: rgb(104, 159, 241);
+}
+.bottomBAr {
+    display: inline-block;
 }
