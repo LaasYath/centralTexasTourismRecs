@@ -96,6 +96,10 @@ a {
     display: none;
 }
 
+.questions ul {
+    display: none;
+}
+
 .questions h4 {
     text-align: left;
     width: 70%;
