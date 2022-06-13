@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="faqFunctions.js"></script>
     <title> FAQ | Central Texas Tourism Reccomendations! </title>
 </head>
 <body>
     <!-- Menu Bar Buttons -->
     <div class="menuButtons">
-        <button type="button" onmouseover="changeBg()" onmouseout="changeBgBack"> <a href="http://localhost:81/homeFiles/home.php"> <img id="homeLogo" src="webLogo.png" alt="Logo"> </a> </button>
+        <button type="button" onmouseover="changeBg()" onmouseout="changeBgBack()"> <a href="http://localhost:81/homeFiles/home.php"> <img id="homeLogo" src="webLogo.png" alt="Logo"> </a> </button>
         <button type="button"> <a href="http://localhost:81/browseFiles/browse.php"> ATTRACTIONS </a> </button>
         <button type="button"> <a href="http://localhost:81/hotelFiles/hotel.php"> PLACES TO STAY </a> </button>
         <button type="button"> <a href="http://localhost:81/contactFiles/contactForm.php"> CONTACT </a> </button>
@@ -27,14 +28,14 @@
 
     <!-- Questions -->
     <div class="questions">
-        <h4> What's so special about Central Texas? <button type="button" onclick="" class="view"> + </button></h4>
-        <p id="ans1"> Central Texas is the home of great culture and history. The "Keep Austin Weird" movement has perserved the authentic Texan culture. 
+        <h4> What's so special about Central Texas? <button type="button" onclick="view('ans')" class="view"> + </button></h4>
+        <p id="ans"> Central Texas is the home of great culture and history. The "Keep Austin Weird" movement has perserved the authentic Texan culture. 
             You'll come across beautiful parks and rivers, perfect for fishing, hiking, kayaking, swimming, and so much more! Pick flowers
             or fruit from family owned farms, visit rodeos, sunflower festivals, music parades, and other local events all year round! Don't
             miss out, and come visit today!
         </p>
 
-        <h4> How much does it cost to visit? <button type="button" class="view"> + </button> </h4>
+        <h4> How much does it cost to visit? <button type="button" onclick="view('ans2')" class="view"> + </button> </h4>
         <p id="ans2"> Cost is dependent on where you will be staying, but feel free to look at the following sites
             in order to find a living arrangement that fits best with you/your family. If you would like to 
             plan out/budget your trip, please head to our <a href="http://localhost:81/browse.php"> attractions</a>
@@ -46,7 +47,7 @@
             </ul>
         </p>
 
-        <h4> Are there kid-friendly activities? <button type="button" class="view"> + </button> </h4>
+        <h4> Are there kid-friendly activities? <button type="button" onclick="view('ans3')" class="view"> + </button> </h4>
         <p id="ans3"> Yes! You can find a list of family-friendly activities by using the search tool on our <a href="http://localhost:81/browse.php"> attractions </a>
             page!
         </p>

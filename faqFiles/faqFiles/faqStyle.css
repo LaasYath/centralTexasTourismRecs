@@ -93,10 +93,7 @@ a {
     width: 70%;
     margin: auto;
     margin-bottom: 20px;
-}
-
-#ans1 {
-    display: inline;
+    display: none;
 }
 
 .questions h4 {
