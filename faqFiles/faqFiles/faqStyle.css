@@ -23,6 +23,13 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.menuButtons button:hover {
+    background-color: rgb(85, 149, 250);
+    border-width: 3px;
+    border-style: inset;
+    border-color: grey;
+}
+
 /* search Bar */
 .menuButtons form {
     background-color: rgb(185, 207, 240);
@@ -86,6 +93,9 @@ a {
     width: 70%;
     margin: auto;
     margin-bottom: 20px;
+}
+
+#ans1 {
     display: inline;
 }
 
