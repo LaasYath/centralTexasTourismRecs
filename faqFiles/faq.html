@@ -13,7 +13,7 @@
     <div class="menuButtons">
         <button type="button" onmouseover="changeBg()" onmouseout="changeBgBack()"> <a href="http://localhost:81/homeFiles/home.php"> <img id="homeLogo" src="webLogo.png" alt="Logo"> </a> </button>
         <button type="button"> <a href="http://localhost:81/browseFiles/browse.php"> ATTRACTIONS </a> </button>
-        <button type="button"> <a href="http://localhost:81/hotelFiles/hotel.php"> PLACES TO STAY </a> </button>
+        <button type="button"> <a href="http://localhost:81/hotelFiles/hotel.php"> HOTELS </a> </button>
         <button type="button"> <a href="http://localhost:81/contactFiles/contactForm.php"> CONTACT </a> </button>
         <button type="button" id="pageButton"> <a href="http://localhost:5500/faqFiles/faq.html"> FAQ </a> </button>
         <form action="/searchFiles/search.php" method="POST">
@@ -52,9 +52,17 @@
             page!
         </p>
 
-        <h4> Are there kid-friendly activities? <button type="button" onclick="view('ans3')" class="view"> + </button> </h4>
-        <p id="ans3"> Yes! You can find a list of family-friendly activities by using the search tool on our <a href="http://localhost:81/browse.php"> attractions </a>
-            page!
+        <h4> What is the weather like? <button type="button" onclick="view('ans4')" class="view"> + </button> </h4>
+        <p id="ans4"> Prepare for hot summers, with highs of over 100 degrees farenheit! Remember to pack your sunscreen!
+            Enjoy perfect spring and fall weather with averages of high 60s and low 70s.
+        </p>
+
+        <h4> What does the city life look like? <button type="button" onclick="view('ans5')" class="view"> + </button> </h4>
+        <p id="ans5"> Austin is abuzz with restaurants, music, and bars. 6th Street is a common go-to for many residents!
+        </p>
+
+        <h4> Are there any lakes or beaches? <button type="button" onclick="view('ans6')" class="view"> + </button> </h4>
+        <p id="ans6"> While Central Texas ia bit far from the Gulf of Mexico, we do have many lakes for visitors to go swimming, kayaking, fishing, and so much more!
         </p>
     </div>
 
