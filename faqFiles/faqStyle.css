@@ -60,6 +60,10 @@ body {
     font-size: 18px;
 }
 
+input:focus {
+    outline: none;
+}
+
 #submitSearch {
     background-color: rgb(225, 230, 236); 
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -94,7 +98,7 @@ a {
 
 #faqBlurb {
     text-align: justify;
-    width: 33%;
+    width: 48%;
     margin: auto;
     margin-bottom: 10px;
 }
@@ -136,6 +140,11 @@ a {
     text-align: left;
     width: 70%;
     margin: auto;
+}
+
+/* buttons */
+.view {
+    float: right;
 }
 
 /* Bottom Bar */
