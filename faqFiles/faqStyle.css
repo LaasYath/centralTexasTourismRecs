@@ -30,7 +30,7 @@ body {
     border-color: grey;
 }
 
-/* search Bar */
+/* Search Bar */
 .menuButtons form {
     background-color: rgb(185, 207, 240);
     border-style: solid;
@@ -41,17 +41,39 @@ body {
     margin-bottom: 0px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgb(225, 230, 236);
 }
-#submit {
-    width: 23%;
-    height: 44px;
-    float: right;
+
+#topSearch:hover {
+    border-style: inset;
+    border-width: 3px;
 }
+
 #search {
     height: 38px;
     width: 73%;
     float: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 230, 236);
+    border-style: none;
+    font-size: 18px;
+}
+
+#submitSearch {
+    background-color: rgb(225, 230, 236); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 23%;
+    height: 44px;
+    float: right;
+    font-size: 20px;
+    border-style: none;
+}
+
+/* Un-underline links */
+a {
+    text-decoration: none;
+    color: black;
 }
 
 #pageButton {
@@ -62,11 +84,6 @@ body {
 #homeLogo {
     width: 35%;
     height: 90%;
-}
-
-a {
-    text-decoration-line: none;
-    color: black;
 }
 
 /* Heading */
