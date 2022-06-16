@@ -86,7 +86,6 @@ The `FAQ` page displays frequently asked questions with answers and links to use
 - [Trivago](https://www.trivago.com/)
 
 ### Home Images
-- [Background Image of Austin (Stuart Seeger - flickr - CC BY 2.0)](https://commons.wikimedia.org/wiki/File:Austin_Texas_Lake_Front.jpg)
 - [History Image of Texas State Capitol (LoneStarMike - Own Work - CC BY 3.0)](https://commons.wikimedia.org/wiki/File:TexasStateCapitol-2010-01.JPG)
 - [Music Image of ACL Concert (Austin Party Bus Rental - WikiMedia Commons CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/us/)
 - [Outdoors Image of Lake Georgetown Park (Austex - Own Work - CC BY SA 3.0)](https://commons.wikimedia.org/wiki/File:GeorgetownParksBH.jpg)
