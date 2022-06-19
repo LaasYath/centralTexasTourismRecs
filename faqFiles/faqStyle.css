@@ -232,7 +232,7 @@ a {
 .bottomBar2 {
     padding-top: 24px;
     padding-bottom: 24px;
-    position: aboslute;
+    position: absolute;
     float: right;
     display: inline-block;
     width: 50%;
@@ -243,8 +243,13 @@ a {
     display: inline-block;
 }
 
+/* Back to top - sticky button */
 .top {
-    position: -webkit-sticky;
-    position: sticky;
-    margin-bottom: 100px;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color:rgb(104, 159, 241, 0.5);
 }
