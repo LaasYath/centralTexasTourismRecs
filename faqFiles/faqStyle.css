@@ -242,3 +242,8 @@ a {
 .bottomBAr {
     display: inline-block;
 }
+
+.top {
+    position: sticky;
+    margin-bottom: 100px;
+}
