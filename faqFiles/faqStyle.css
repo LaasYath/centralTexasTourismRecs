@@ -244,6 +244,7 @@ a {
 }
 
 .top {
+    position: -webkit-sticky;
     position: sticky;
     margin-bottom: 100px;
 }
