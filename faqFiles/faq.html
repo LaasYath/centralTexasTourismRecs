@@ -9,6 +9,7 @@
     <title> FAQ | Central Texas Tourism Reccomendations! </title>
 </head>
 <body>
+
     <!-- Menu Bar Buttons -->
     <div class="menuButtons">
         <button type="button" onmouseover="changeBg()" onmouseout="changeBgBack()"> <a href="http://localhost:81/homeFiles/home.php"> <img id="homeLogo" src="webLogo.png" alt="Logo"> </a> </button>
@@ -23,7 +24,53 @@
     </div>
 
     <!-- Back to top button -->
-    <a href="#pageButton" class="top"> &uarr; </a>
+    <a href="#pageButton" class="top" id="top"> &uarr; </a>
+
+    <!-- Help Bot -->
+    <div class="bot">
+        <button title="Navigation Help Bot" id="openBot" type="button"> <img id="robotImg" src="robot.svg"> <br> </button>
+        <div id="round0">
+            <h4 id="set0"> Hi! This is the Navigation Help Bot! What are you looking for today? </h4>            
+            <p id="set01"> Things to Do </p>
+            <p id="set02"> Visitor Information </p>
+            <p id="set03"> Privacy/Cookies </p>
+            <p id="set04"> Other </p>
+        </div>
+        <div id="round01">
+            <h4 id="set1"> Any preferences? </h4>
+            <a id="set11" href="http://localhost:81/browseFiles/browse.php?dining"> Dining </a>
+            <br>
+            <br>
+            <a id="set12" href="http://localhost:81/browseFiles/browse.php?music"> Music </a>
+            <br>
+            <br>
+            <a id="set13" href="http://localhost:81//homeFiles/home.php#upcoming"> Upcoming Events </a>
+            <p id="set14"> Other </p>
+        </div>
+        <div id="round02">
+            <h4 id="set2"> Any of these what you're looking for? </h4>
+            <a id="set21" href="http://localhost:81/extra/about.php"> Visitor Centers </a>
+            <br>
+            <br>
+            <a id="set22" href="http://127.0.0.1:5500/faqFiles/faq.html"> Costs, Weather, etc. </a>
+            <p id="set23"> Other </p>
+        </div>
+        <div id="round03">
+            <h4 id="set3"> Any of these what you're looking for? </h4>
+            <a id="set31" href="http://localhost:81/extra/privacy.php"> Privacy Policy </a>
+            <br>
+            <br>
+            <a id="set32" href="http://localhost:81/extra/privacy.php#cookieUse"> Cookie Use </a>
+            <br>
+            <br>
+            <a id="set33" href="http://localhost:81/extra/privacy.php#contactSecurity"> Contact Form Security </a>
+            <p id="set34"> Other </p>
+        </div>
+        <!-- <form id="botSearch" action="browse.php" method="POST">
+            <input title="Enter topic for navigation help!" id="naviSearch" type="text" name="naviSearch" placeholder="Search...">
+            <button id="submitNavi" type="submit" name="submitNavi"> &#128269 </button>
+        </form> -->
+    </div>
 
     <!-- Heading -->
     <h2 id="heading"> Frequently Asked Questions </h2>

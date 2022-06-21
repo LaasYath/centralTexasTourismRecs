@@ -246,10 +246,63 @@ a {
 /* Back to top - sticky button */
 .top {
     position: fixed;
-    bottom: 15px;
-    left: 15px;
+    bottom: 85px;
+    right: 15px;
     font-size: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color:rgb(104, 159, 241, 0.5);
+    z-index: 1;
+    float: right;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Bot */
+/* Open Button */
+#openBot {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color:rgb(85, 149, 250);
+    padding: 15px;
+    z-index: 2;
+}
+
+#openBot img {
+    width: 25px;
+}
+
+#round0, #round01, #round02, #round03 {
+    display: none;
+    float: right;
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 40vh;
+    height: 40vh;
+}
+
+#botSearch {
+    margin-left: 5px;
+    display: none;
+    position: absolute;
+    bottom: 15px;
+}
+
+#submitNavi {
+    background-color: white;
+    border: none;
+}
+
+.bot {
+    position: fixed;
+    float: right;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
 }
