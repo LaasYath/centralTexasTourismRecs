@@ -28,12 +28,11 @@
 
     <!-- Help Bot -->
     <div class="bot">
-        <button title="Navigation Help Bot" id="openBot" type="button"> <img id="robotImg" src="robot.svg"> <br> </button>
         <div id="round0">
             <h4 id="set0"> Hi! This is the Navigation Help Bot! What are you looking for today? </h4>            
-            <p id="set01"> Things to Do </p>
-            <p id="set02"> Visitor Information </p>
-            <p id="set03"> Privacy/Cookies </p>
+            <p id="set01" onclick="openRound01()"> Things to Do </p>
+            <p id="set02" onclick="openRound02()"> Visitor Information </p>
+            <p id="set03" onclick="openRound03()"> Privacy/Cookies </p>
             <p id="set04"> Other </p>
         </div>
         <div id="round01">
@@ -52,7 +51,7 @@
             <a id="set21" href="http://localhost:81/extra/about.php"> Visitor Centers </a>
             <br>
             <br>
-            <a id="set22" href="http://127.0.0.1:5500/faqFiles/faq.html"> Costs, Weather, etc. </a>
+            <a id="set22" href="http://127.0.0.1:5500/faqFiles/faq.html?weather"> Costs, Weather, etc. </a>
             <p id="set23"> Other </p>
         </div>
         <div id="round03">
@@ -66,6 +65,7 @@
             <a id="set33" href="http://localhost:81/extra/privacy.php#contactSecurity"> Contact Form Security </a>
             <p id="set34"> Other </p>
         </div>
+        <button title="Navigation Help Bot" id="openBot" type="button" onclick="changeIcon()"> <img id="robotImg" src="robot.svg"> <br> </button>
         <!-- <form id="botSearch" action="browse.php" method="POST">
             <input title="Enter topic for navigation help!" id="naviSearch" type="text" name="naviSearch" placeholder="Search...">
             <button id="submitNavi" type="submit" name="submitNavi"> &#128269 </button>
@@ -102,7 +102,7 @@
             page!
         </p>
 
-        <h4> What is the weather like? <button type="button" onclick="view('ans4')" class="view"> + </button> </h4>
+        <h4 id="weatherQ"> What is the weather like? <button type="button" onclick="view('ans4')" class="view"> + </button> </h4>
         <p id="ans4"> Prepare for hot summers, with highs of over 100 degrees farenheit! Remember to pack your sunscreen!
             Enjoy perfect spring and fall weather with averages of high 60s and low 70s.
         </p>
@@ -115,6 +115,15 @@
         <p id="ans6"> While Central Texas ia bit far from the Gulf of Mexico, we do have many lakes for visitors to go swimming, kayaking, fishing, and so much more!
         </p>
     </div>
+
+    <script>
+        if (window.location.href=="http://127.0.0.1:5500/faqFiles/faq.html?weather") {
+            // Highlight weather Question
+            var item = document.getElementById("weatherQ");
+            console.log(item);
+            item.style.backgroundColor = "yellow";
+        }
+    </script>
 
     <hr>
 
