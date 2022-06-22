@@ -114,7 +114,7 @@ This Bar exists at the bottom of all the pages in the website. It contains links
  - [Sean Kingston - The Road to Deliverance Tour](https://www.prekindle.com/event/75117-sean-kingston-austin)
  - [Y'all We Asian](https://falloutcomedy.com/shows/yall-we-asian/)
  - [Good Fight](https://falloutcomedy.com/shows/good-fight-2/)
- - [Fleet Foxes: Shore Tour](https://www.moodyamphitheater.com/events/fleet-foxes
+ - [Fleet Foxes: Shore Tour](https://www.moodyamphitheater.com/events/fleet-foxes)
  - [Big Time Rush: Forever Tour](https://www.moodyamphitheater.com/events/big-time-rush)
  - [Father John Misty](https://www.moodyamphitheater.com/events/father-john-misty)
  - [ACL Radio & Long Center Present: The Drop In](https://thelongcenter.org/upcoming-calendar/?gclid=Cj0KCQjw-daUBhCIARIsALbkjSZYXK7n6hxZbP54mwOncDwojsSCfZSV_TSU38FL8lvqxpEc7G9HU_kaAtA2EALw_wcB)
@@ -126,7 +126,7 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 - [Trivago](https://www.trivago.com/)
 
 ### Images
- - All Images have been given proper credation withing the website itself, including the citation with a link to the original image/license.
+ - All Images have been given proper credation within the website itself, including the citation with a link to the original image/license.
 
 
 ## Languages, Tools, & Softwares Used
