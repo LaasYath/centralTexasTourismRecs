@@ -162,6 +162,7 @@ body {
     width: 10%;
     text-align: center;
     height: 4%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #popupNo {
     position: absolute;
@@ -171,5 +172,6 @@ body {
     width: 10%;
     text-align: center;
     height: 4%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
