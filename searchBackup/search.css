@@ -1,0 +1,33 @@
+/* Including one css file into other */
+@import "../allStyle.css";
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom-style: solid;
+    border-color: black;
+}
+
+.title {
+    margin-bottom: 8px;
+}
+
+#searchTips {
+    margin-bottom: 200px;
+}
+
+#searchTips li {
+    margin-left: 40%;
+    text-align: left;
+}
+
+/* Table/Results Styling */ 
+#resultsTable {
+    table-layout: fixed;
+}
+
+/* table heading */
+th {
+    text-align: left;
+}

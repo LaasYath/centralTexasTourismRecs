@@ -16,7 +16,7 @@
         <button type="button"> <a href="http://localhost:81/browseFiles/browse.php"> ATTRACTIONS </a> </button>
         <button type="button"> <a href="http://localhost:81/hotelFiles/hotel.php"> HOTELS </a> </button>
         <button type="button"> <a href="http://localhost:81/contactFiles/contactForm.php"> CONTACT </a> </button>
-        <button type="button" id="pageButton"> <a href="http://localhost:5500/faqFiles/faq.html"> FAQ </a> </button>
+        <button type="button" id="pageButton"> <a href="http://127.0.0.1:5500/faqFiles/faq.html"> FAQ </a> </button>
         <form id="topSearch" action="http://localhost:81/searchFiles/search.php" method="POST">
             <input title="Type Activity, Location, Price, Zipcode, Date, etc." id="search" type="text" id="pageButton" name="searchBar" placeholder="Search...">
             <button  id="submitSearch" type="submit" name="submitSearch"> &#128269 </button>
@@ -33,7 +33,7 @@
             <p id="set01" onclick="openRound01()"> Things to Do </p>
             <p id="set02" onclick="openRound02()"> Visitor Information </p>
             <p id="set03" onclick="openRound03()"> Privacy/Cookies </p>
-            <p id="set04"> Other </p>
+            <a id="set04" href="http://localhost:81/extra/sitemap.php"> Other </a>
         </div>
         <div id="round01">
             <h4 id="set1"> Any preferences? </h4>
@@ -44,32 +44,36 @@
             <br>
             <br>
             <a id="set13" href="http://localhost:81//homeFiles/home.php#upcoming"> Upcoming Events </a>
-            <p id="set14"> Other </p>
+            <br>
+            <br>
+            <a href="http://localhost:81/extra/sitemap.php" id="set14"> Other </a>
         </div>
         <div id="round02">
             <h4 id="set2"> Any of these what you're looking for? </h4>
             <a id="set21" href="http://localhost:81/extra/about.php"> Visitor Centers </a>
             <br>
             <br>
-            <a id="set22" href="http://127.0.0.1:5500/faqFiles/faq.html?weather"> Costs, Weather, etc. </a>
-            <p id="set23"> Other </p>
+            <a id="set22" href="http://127.0.0.1:5500/faqFiles/faq.html?weather"> Weather, </a>
+            <a href="http://127.0.0.1:5500/faqFiles/faq.html?cost"> cost, </a> 
+            <a href="http://127.0.0.1:5500/faqFiles/faq.html"> etc. </a>
+            <br>
+            <br>
+            <a id="set23" href="http://localhost:81/extra/sitemap.php"> Other </a>
         </div>
         <div id="round03">
             <h4 id="set3"> Any of these what you're looking for? </h4>
             <a id="set31" href="http://localhost:81/extra/privacy.php"> Privacy Policy </a>
             <br>
             <br>
-            <a id="set32" href="http://localhost:81/extra/privacy.php#cookieUse"> Cookie Use </a>
+            <a id="set32" href="http://localhost:81/extra/privacy.php?cookieUse"> Cookie Use </a>
             <br>
             <br>
-            <a id="set33" href="http://localhost:81/extra/privacy.php#contactSecurity"> Contact Form Security </a>
-            <p id="set34"> Other </p>
+            <a id="set33" href="http://localhost:81/extra/privacy.php?contactSecurity"> Contact Form Security </a>
+            <br>
+            <br>
+            <a id="set34" href="http://localhost:81/extra/sitemap.php"> Other </a>
         </div>
         <button title="Navigation Help Bot" id="openBot" type="button" onclick="changeIcon()"> <img id="robotImg" src="robot.svg"> <br> </button>
-        <!-- <form id="botSearch" action="browse.php" method="POST">
-            <input title="Enter topic for navigation help!" id="naviSearch" type="text" name="naviSearch" placeholder="Search...">
-            <button id="submitNavi" type="submit" name="submitNavi"> &#128269 </button>
-        </form> -->
     </div>
 
     <!-- Heading -->
@@ -78,14 +82,14 @@
 
     <!-- Questions -->
     <div class="questions">
-        <h4> What's so special about Central Texas? <button type="button" onclick="view('ans')" class="view"> + </button></h4>
+        <h4 id="q1"> What's so special about Central Texas? <button type="button" onclick="view('ans'); change(this)" class="view"> + </button></h4>
         <p id="ans"> Central Texas is the home of great culture and history. The "Keep Austin Weird" movement has perserved the authentic Texan culture. 
             You'll come across beautiful parks and rivers, perfect for fishing, hiking, kayaking, swimming, and so much more! Pick flowers
             or fruit from family owned farms, visit rodeos, sunflower festivals, music parades, and other local events all year round! Don't
             miss out, and come visit today!
         </p>
 
-        <h4> How much does it cost to visit? <button type="button" onclick="view('ans2'); view('ans2.0')" class="view"> + </button> </h4>
+        <h4 id="costQ"> How much does it cost to visit? <button type="button" onclick="view('ans2'); view('ans2.0'); change(this)" class="view"> + </button> </h4>
         <p id="ans2"> Cost is dependent on where you will be staying, but feel free to check out our <a href="http://localhost:81/hotelFiles/hotel.php"> hotels </a> page to browse our carefully curated list of exceptional hotels or 
             feel free to look at the following sites in order to find a living arrangement that fits best with you/your family. If you would like to 
             plan out/budget your trip, please head to our <a href="http://localhost:81/browseFiles/browse.php"> attractions</a>
@@ -97,21 +101,21 @@
             </ul>
         </p>
 
-        <h4> Are there kid-friendly activities? <button type="button" onclick="view('ans3')" class="view"> + </button> </h4>
+        <h4 id="q3"> Are there kid-friendly activities? <button type="button" onclick="view('ans3'); change(this)" class="view"> + </button> </h4>
         <p id="ans3"> Yes! You can find a list of family-friendly activities by using the search tool on our <a href="http://localhost:81/browseFiles/browse.php"> attractions </a>
             page!
         </p>
 
-        <h4 id="weatherQ"> What is the weather like? <button type="button" onclick="view('ans4')" class="view"> + </button> </h4>
+        <h4 id="weatherQ"> What is the weather like? <button type="button" onclick="view('ans4'); change(this)" class="view"> + </button> </h4>
         <p id="ans4"> Prepare for hot summers, with highs of over 100 degrees farenheit! Remember to pack your sunscreen!
             Enjoy perfect spring and fall weather with averages of high 60s and low 70s.
         </p>
 
-        <h4> What does the city life look like? <button type="button" onclick="view('ans5')" class="view"> + </button> </h4>
+        <h4 id="q5"> What does the city life look like? <button type="button" onclick="view('ans5'); change(this)" class="view"> + </button> </h4>
         <p id="ans5"> Austin is abuzz with restaurants, music, and bars. 6th Street is a common go-to for many residents!
         </p>
 
-        <h4> Are there any lakes or beaches? <button type="button" onclick="view('ans6')" class="view"> + </button> </h4>
+        <h4 id="q6"> Are there any lakes or beaches? <button type="button" onclick="view('ans6'); change(this)" class="view"> + </button> </h4>
         <p id="ans6"> While Central Texas ia bit far from the Gulf of Mexico, we do have many lakes for visitors to go swimming, kayaking, fishing, and so much more!
         </p>
     </div>
@@ -122,6 +126,17 @@
             var item = document.getElementById("weatherQ");
             console.log(item);
             item.style.backgroundColor = "yellow";
+        } else if (window.location.href=="http://127.0.0.1:5500/faqFiles/faq.html?cost") {
+            // Highlight cost Question
+            var item = document.getElementById("costQ");
+            console.log(item);
+            item.style.backgroundColor = "yellow";
+        } else if (window.location.href.includes("#") == true) {
+            console.log("saw id in url");
+            var id = window.location.href.substr(40);
+            console.log(id);
+            var item = document.getElementById(id);
+            item.style.display="block";
         }
     </script>
 
@@ -134,11 +149,11 @@
                 <img width="100%" src="webLogo.png" alt="Logo">
             </div>
             <div id="helpLinks" class="barSect">
-                <button type="button" id="third"> About </button>
+                <button type="button" id="third"> <a href="http://localhost:81/extra/about.php"> About </a> </button>
                 <br>
-                <button type="button" id="second"> Sitemap </button>
+                <button type="button" id="second"> <a href="http://localhost:81/extra/sitemap.php"> Sitemap </a> </button>
                 <br>
-                <button type="button" id="first"> Privacy Policy  </button>
+                <button type="button" id="first"> <a href="http://localhost:81/extra/privacy.php"> Privacy Policy </a> </button>
             </div>
         </div>
         <div class="bottomBar2">

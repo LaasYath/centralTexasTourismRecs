@@ -1,0 +1,31 @@
+/* Import Header and footer styling */
+@import "../allStyle.css";
+
+/* Heading */
+#heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mapBlurb {
+    text-align: center;
+    width: 33%;
+    margin: auto;
+}
+
+.pageLinks {
+    margin-left: 3%;
+}
+
+.pageSect1 {
+    margin-left: 6%;
+}
+
+.pageSect2 {
+    margin-left: 9%;
+}
+
+#links {
+    margin-left: 33%;
+    width: 33%;
+}

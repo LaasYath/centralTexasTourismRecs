@@ -1,0 +1,35 @@
+/* Import Header and footer styling */
+@import "../allStyle.css";
+
+/* Heading */
+#heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.aboutBlurb {
+    text-align: center;
+    width: 33%;
+    margin: auto;
+}
+
+ul {
+    display: none;
+}
+
+.content {
+    margin-left: 25%;
+    width: 50%;
+}
+
+.content button {
+    margin-bottom: 20px;
+}
+
+.content a {
+    margin-left: 5%;
+}
+
+pre {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

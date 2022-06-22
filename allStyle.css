@@ -1,0 +1,250 @@
+/* Body Styling */
+body {
+    background-color: rgb(230, 234, 240);
+    height: 100%;
+}
+/* Menu Bar Styling */
+.menuButtons {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    /* width: 90%; */
+}
+
+#homeLogo {
+    width: 35%;
+    height: 90%;
+}
+
+.menuButtons button {
+    background-color: rgb(185, 207, 240);
+    border-style: solid;
+    border-width: 3px;
+    width: 25%;
+    height: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menuButtons button:hover {
+    background-color: rgb(85, 149, 250);
+    border-width: 3px;
+    border-style: inset;
+    border-color: grey;
+}
+
+#pageButton {
+    background-color: rgb(104, 159, 241); 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Search Bar */
+.menuButtons form {
+    background-color: rgb(185, 207, 240);
+    border-style: solid;
+    border-width: 3px;
+    width: 25%;
+    height: 44px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 230, 236);
+}
+
+#topSearch:hover {
+    border-style: inset;
+    border-width: 3px;
+}
+
+#search {
+    height: 36px;
+    width: 73%;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 230, 236);
+    border-style: none;
+    font-size: 18px;
+}
+input:focus {
+    outline: none;
+}
+
+#submitSearch {
+    background-color: rgb(225, 230, 236); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 23%;
+    height: 44px;
+    float: right;
+    font-size: 20px;
+    border-style: none;
+}
+
+/* Un-underline links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Bottom Bar */
+.bottomBar1 {
+    background-color: rgb(104, 159, 241);
+    display: inline-block;
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.barSect {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+} 
+
+#bottomLogo {
+    width: 300px;
+    padding: 0px;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#helpLinks {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#helpLinks button {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+    text-align: left;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 2%;
+}
+
+#helpLinks button:hover {
+    border-style: inset;
+}
+
+#first {
+    width: 250px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    padding: 0px;
+    margin: 0px;
+    line-height: 60px;
+    font-size: 15px;
+}
+
+#second {
+    width: 200px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    padding: 0px;
+    margin: 0px;
+    line-height: 60px;
+    font-size: 15px;
+}
+#third {
+    width: 150px;
+	height: 50px;
+	background: rgb(167, 202, 255);
+    line-height: 60px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#helpLinks button {
+    margin-right: 3px;
+}
+
+.bottomBar2 {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    position: aboslute;
+    float: right;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    background-color: rgb(104, 159, 241);
+}
+
+#bottomBar {
+    display: inline-block;
+}
+
+/* Back to top - sticky button */
+.top {
+    position: fixed;
+    bottom: 85px;
+    right: 15px;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:rgb(104, 159, 241);
+    z-index: 1;
+    float: right;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Bot */
+/* Open Button */
+#openBot {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color:rgb(85, 149, 250);
+    padding: 15px;
+    z-index: 2;
+}
+
+#openBot img {
+    width: 25px;
+}
+
+#round0, #round01, #round02, #round03 {
+    display: none;
+    float: right;
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 40vh;
+    height: 40vh;
+}
+
+#botSearch {
+    margin-left: 5px;
+    display: none;
+    position: absolute;
+    bottom: 15px;
+}
+
+#submitNavi {
+    background-color: white;
+    border: none;
+}
+
+.bot {
+    position: fixed;
+    float: right;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+}

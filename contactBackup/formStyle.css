@@ -1,0 +1,65 @@
+/* Import Header and footer styling */
+@import "../allStyle.css";
+
+/* Heading */
+#heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contactBlurb {
+    text-align: center;
+    width: 33%;
+    margin: auto;
+}
+
+b {
+    color: red;
+}
+
+/* Form styling */
+#formName {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+input {
+    text-align: center;
+    width: 49%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.emailForm {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+}
+
+#emailMessage {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* submit button */
+#subForm {
+    margin-top: 10px;
+}
+
+/* Keeps astrisk on appropriate line */
+.asterisk {
+    display: inline;
+}
+
+#required {
+    display: block;
+}
+
