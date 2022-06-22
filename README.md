@@ -3,10 +3,10 @@ This is your one stop site for finding fun things to do in Central Texas! You ca
 right now!
 
 ## What is it
-This website is dynamic, and allows users to browse for attractions. They can then filter their results by location, price, indoor, outdoor, category, and mask protocols. Beyond that, you can also contact our team to get more information about a particular attraction. Be sure to check out the Frequently Asked Questions first!
+This website is dynamic, and allows users to browse for attractions and hotels. They can then filter their results by location, price, indoor, outdoor, category, and mask protocols. Beyond that, you can also contact our team to get more information about a particular attraction. Be sure to check out the Frequently Asked Questions first!
 
 ### Home
-The `Home` page describes what the website and Central Texas have to offer as well as navigation for the user. The menu bar located at the top of the page allows users to quickly move through the different parts of the website.
+The `Home` page describes what the website and Central Texas have to offer as well as navigation for the user. The menu bar located at the top of the page allows users to quickly move through the different parts of the website. The user can also view upcoming events this month.
 
 ![](homePage.PNG)
 
