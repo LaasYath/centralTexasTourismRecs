@@ -124,17 +124,13 @@
         if (window.location.href=="http://127.0.0.1:5500/faqFiles/faq.html?weather") {
             // Highlight weather Question
             var item = document.getElementById("weatherQ");
-            console.log(item);
             item.style.backgroundColor = "yellow";
         } else if (window.location.href=="http://127.0.0.1:5500/faqFiles/faq.html?cost") {
             // Highlight cost Question
             var item = document.getElementById("costQ");
-            console.log(item);
             item.style.backgroundColor = "yellow";
         } else if (window.location.href.includes("#") == true) {
-            console.log("saw id in url");
             var id = window.location.href.substr(40);
-            console.log(id);
             var item = document.getElementById(id);
             item.style.display="block";
         }
