@@ -11,17 +11,17 @@ The `Home` page describes what the website and Central Texas have to offer as we
 ![](homePage.png)
 
 ### Attractions
-The `Attractions` page displays various attractions. Using the bar to the left, users can select checkboxes to filter their results. Make sure to click the `Update Preferences` button at the bottom of the bar in order for your selection to work. When you select a checkbox, all activities of that type will be displayed, regardless of the other preferences chosen. Located underneath the `Update Preferences` button, there is also the `Clear Preferences` button to clear your selection. On the page itself, you will see individual blocks containing the name, an image, a blurb, and other details relating to the event
+The `Attractions` page displays various attractions. Using the bar to the left, users can select checkboxes to filter their results. Make sure to click the `Update Preferences` button at the bottom of the bar in order for your selection to work. When you select a checkbox, all activities of that type will be displayed, regardless of the other preferences chosen. Located underneath the `Update Preferences` button, there is also the `Clear Preferences` button to clear your selection. On the page itself, you will see individual blocks containing the name, an image, a blurb, and other details relating to the event. Users can search for specific attractions as well.
 
 ![](attractionsPage.png)
 
 ### Hotels
-The `Hotels` page display hotels that the user can browse through. Similarly to the attractions page, the user can sort their results by rating and filter their results by location. Individual blocks will show up with an image, link to the official hotel's website, as well as location and rating.
+The `Hotels` page display hotels that the user can browse through. Similarly to the attractions page, the user can sort their results by rating and filter their results by location. They can also search for specific hotels. Individual blocks will show up with an image, link to the official hotel's website, as well as location and rating.
 
 ![](hotelsPage.png)
 
 ### Contact
-The `Contact` page can be used to send an email to our team. General inquiries about attractions and the user's visit are welcome. The web page also passes the information securely, so there is no need to worry about the user's information being open to malicious hackers. You can read more about it through our [privacy policy](http://localhost:81/extra/privacy.php) Error messages will display below the `Send Mail` button if the input does not meet requirements.
+The `Contact` page can be used to send an email to our team. General inquiries about attractions and the user's visit are welcome. The web page does not store the user's name or email, so there is no need to worry about the user's information being open to malicious hackers. You can read more about it through our [privacy policy](http://localhost:81/extra/privacy.php) Error messages will display below the `Send Mail` button if the input does not meet requirements.
 
 ![](contactPage.png)
 
@@ -36,7 +36,7 @@ The `Search` page is used to search the entire website. Users can search for any
 ![](searchPage.png)
 
 ### Bottom Bar
-This Bar exists at the bottom of all the pages in the website. It contains links to the about page, sitemap, and privacy policy. It includes the copyright disclosure and disclaimer as well. There are also two button on the left hand side that exist on every page. The Up Arrow takes the user to the top of the page while the robot opens up a help navigation bot.
+This Bar exists at the bottom of all the pages in the website. It contains links to the about page, sitemap, and privacy policy. Our about page has information on visitor centers in Central Texas and our Sitemap contains an index of different content available. The Privacy Policy provides information on cookies, session data, and site security. It includes the copyright disclosure and disclaimer as well. There are also two buttons on the left hand side that exist on every page. The Up Arrow takes the user to the top of the page while the robot icon opens up a help navigation bot. This bot helps users by directing them to helpful pages based on survey questions, each dependent on the answer's response to the prior question.
 
 ![](bottomBar.png)
 
@@ -128,7 +128,9 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 ### Images
  - All Images issued under a Creative Commons License have been given proper credation within the website itself, including the citation with a link to the original image/license.
 
-#### Copyrighted Images
+### Copyrighted Images
+
+#### Hotels
 - Management. Hilton Garden Inn Austin-Round Rock. Unknown. Hilton, https://www.hilton.com/en/hotels/ausrrgi-hilton-garden-inn-austin-round-rock/?WT.mc_id=zlada0ww1gi2psh3ggl4advbpp5dkt6multibr7_153663322_1003528&gclid=CjwKCAjwnZaVBhA6EiwAVVyv9Gtl_u24xXEYLLFgt1IBHb93N8Z6okUB9BkcxaqjcfRUxsuBoI6TDhoCvTMQAvD_BwE&gclsrc=aw.ds
 - Management. Holiday Inn Express & Suites Round Rock - Austin North. Unknown. IHG Hotels & Resorts, https://www.ihg.com/holidayinnexpress/hotels/us/en/round-rock/rndes/hoteldetail
 - Management. Country Inn & Suites by Radisson, Round Rock, TX. Unknown. Country Inn Suites, https://country-inn-suites.com/usa-hotels/texas/round-rock/
@@ -136,6 +138,13 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 - Management. South Congress Hotel - A Boutique Hotel in Austin, Texas. Unknown. South Congress Hotel, https://southcongresshotel.com/
 - Management. Best Western Plus Georgetown Inn & Suits. Unknown. Best Western, https://www.bestwestern.com/en_US/book/hotel-rooms.44689.html?iata=00170230&ssob=BLPBM0001G&checkIn=2022-06-26&checkOut=2022-06-27&rooms=1&adults=2&children=0&utm_content=BA&cid=BLPBM0001G:tripadvisor:HWS:44689&refid=fb36f4fd-0f75-4318-9fd5-b9d43258dd89
 - Management. Sheraton Austin Georgetown Hotel & Conference Center. Unknown. Marriott, https://www.marriott.com/en-us/hotels/ilegt-sheraton-austin-georgetown-hotel-and-conference-center/photos/
+
+#### Attractions
+- Management. Round Rock Premium Outlets. 2019. Go Round Rock, https://goroundrock.com/get-fall-ready-at-round-rock-premium-outlets/
+- Management. Old Settlers Park. Unknown. Round Rock Texas, https://www.roundrocktexas.gov/city-departments/parks-and-recreation/old-settlers-park/
+- Management. Domain NORTHSIDE. Unknown. Endeavor, https://www.endeavor-re.com/properties/domain-northside/
+- Management. Barton Creek Square. 2019. The Business Journals, https://www.bizjournals.com/austin/news/2019/02/15/why-simon-is-overhauling-barton-creek-square-mall.html
+- Management. Zip Lost Pines. Unknown. Zip Lost Pines, https://ziplostpines.com/
 
 
 ## Languages, Tools, & Softwares Used
