@@ -126,7 +126,16 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 - [Trivago](https://www.trivago.com/)
 
 ### Images
- - All Images have been given proper credation within the website itself, including the citation with a link to the original image/license.
+ - All Images issued under a Creative Commons License have been given proper credation within the website itself, including the citation with a link to the original image/license.
+
+#### Copyrighted Images
+- Management. Hilton Garden Inn Austin-Round Rock. Unknown. Hilton, https://www.hilton.com/en/hotels/ausrrgi-hilton-garden-inn-austin-round-rock/?WT.mc_id=zlada0ww1gi2psh3ggl4advbpp5dkt6multibr7_153663322_1003528&gclid=CjwKCAjwnZaVBhA6EiwAVVyv9Gtl_u24xXEYLLFgt1IBHb93N8Z6okUB9BkcxaqjcfRUxsuBoI6TDhoCvTMQAvD_BwE&gclsrc=aw.ds
+- Management. Holiday Inn Express & Suites Round Rock - Austin North. Unknown. IHG Hotels & Resorts, https://www.ihg.com/holidayinnexpress/hotels/us/en/round-rock/rndes/hoteldetail
+- Management. Country Inn & Suites by Radisson, Round Rock, TX. Unknown. Country Inn Suites, https://country-inn-suites.com/usa-hotels/texas/round-rock/
+- Management. The Ruby Hotel & Bar. Unknown. The Ruby Hotel, https://therubyhotel.com/gallery
+- Management. South Congress Hotel - A Boutique Hotel in Austin, Texas. Unknown. South Congress Hotel, https://southcongresshotel.com/
+- Management. Best Western Plus Georgetown Inn & Suits. Unknown. Best Western, https://www.bestwestern.com/en_US/book/hotel-rooms.44689.html?iata=00170230&ssob=BLPBM0001G&checkIn=2022-06-26&checkOut=2022-06-27&rooms=1&adults=2&children=0&utm_content=BA&cid=BLPBM0001G:tripadvisor:HWS:44689&refid=fb36f4fd-0f75-4318-9fd5-b9d43258dd89
+- Management. Sheraton Austin Georgetown Hotel & Conference Center. Unknown. Marriott, https://www.marriott.com/en-us/hotels/ilegt-sheraton-austin-georgetown-hotel-and-conference-center/photos/
 
 
 ## Languages, Tools, & Softwares Used
