@@ -126,7 +126,7 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 - [Trivago](https://www.trivago.com/)
 
 ### Images
- - All Images issued under a Creative Commons License have been given proper credation within the website itself, including the citation with a link to the original image/license.
+ - All Images issued under a Creative Commons License have been given proper accreditation within the website itself, including the citation with a link to the original image/license.
 
 ### Copyrighted Images
 
@@ -145,6 +145,11 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 - Management. Domain NORTHSIDE. Unknown. Endeavor, https://www.endeavor-re.com/properties/domain-northside/
 - Management. Barton Creek Square. 2019. The Business Journals, https://www.bizjournals.com/austin/news/2019/02/15/why-simon-is-overhauling-barton-creek-square-mall.html
 - Management. Zip Lost Pines. Unknown. Zip Lost Pines, https://ziplostpines.com/
+
+### Templates
+
+#### Canva Slideshow Template
+- Management. "Yellow Black White Modern Doodle UI Computer Pitch Deck Marketing Presentation". Canva, 21 June 2022 https://www.canva.com/design/DAFEvL5aG4Q/kOCoTIETjEb4ItMUfwOPmA/view?utm_content=DAFEvL5aG4Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview
 
 
 ## Languages, Tools, & Softwares Used
