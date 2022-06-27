@@ -1,25 +1,25 @@
 <?php
-    // establishing connection
+    // establishing connection to table
     include "browseConnection.php";
 
-    session_start();
+    // session_start();
     // $_SESSION["faves"] = array();
     // $faves = $_SESSION["faves"];
     // print_r($faves);
     // array_push($faves, "Inner Space Caverns");
     // print_r($faves);
     // $_SESSION["faves"] = $faves;
-    if (!isset($_SESSION["faves"])) {
-        $_SESSION["faves"] = array();
-    }
-    $faves = $_SESSION["faves"];
-    $add = "Inner Space Caverns";
-    if (!(in_array($add, $faves))) {
-        array_push($faves, "Inner Space Caverns");
-    }
+    // if (!isset($_SESSION["faves"])) {
+    //     $_SESSION["faves"] = array();
+    // }
+    // $faves = $_SESSION["faves"];
+    // $add = "Inner Space Caverns";
+    // if (!(in_array($add, $faves))) {
+    //     array_push($faves, "Inner Space Caverns");
+    // }
     
-    // print_r($faves);
-    $_SESSION["faves"] = $faves;
+    // // print_r($faves);
+    // $_SESSION["faves"] = $faves;
 
 ?>
 
@@ -35,17 +35,25 @@
     <title> BROWSE | Central Texas Tourism Reccomendations! </title>
 </head>
 <body>
-    <!-- Array of checkbox names -->
     <?php
+        // Array of checkbox names
         $boxes = array('price0', 'priceLow', 'priceMid', 'priceHigh',
         'cityAustin', 'cityRoundrock', 'cityGeorgetown',
         'envtIndoor', 'envtOutdoor', 
         'typeHistory', 'typeMusic', 'typeDining', 'typeFamily', 'typeParks', 'typeMisc',
         'maskRequired', 'maskRecommended', 'maskOptional');
 
+        // list of checked boxes
         $prefer = array();
 
-        // Checks if user has been redirected by bot, and display appropriate results
+        // Adds checked boxes to seperate list ($prefer)
+        foreach($boxes as $box) {
+            if(isset($_POST[$box])) {
+                array_push($prefer, $box);
+            }
+        }
+
+        // Checks if user has been redirected by bot or from blurbs on home page, displays appropriate results
         if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?dining") {
             array_push($prefer, "typeDining");
         } else if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?music") {
@@ -60,22 +68,17 @@
             array_push($prefer, "typeFamily");
         }
 
-        // Adds checked boxes to seperate list ($prefer)
-        foreach($boxes as $box) {
-            if(isset($_POST[$box])) {
-                array_push($prefer, $box);
-            }
-        }
 
         // Clear Preferences
         if(isset($_POST['clear']) && ($_POST['clear'] == "clear")) {
             $prefer = array();
-        } 
+        }
+        
     ?>
 
     
 
-    <!-- Menu Bar - Links -->
+    <!-- Menu Bar - Header -->
     <div class="menuButtons">
         <button type="button" id="homeButton"onmouseover="var logo = document.getElementById('homeLogo');
                                                         logo.src = 'darkWebLogo.png';" 
@@ -105,280 +108,91 @@
         <div class="filters">
 
             <!-- Price Checkboxes -->
-            <h3> Price <button type="button" id="priceView" onclick="var answer = document.getElementById('priceOptions');
-                                var viewButton = document.getElementById('priceView');
-                                let compStyles = window.getComputedStyle(answer);
-                                if (compStyles.display == 'none') {
-                                    answer.style.display = 'block';
-                                    viewButton.innerHTML = '-';
-                                } else if (compStyles.display == 'block') {
-                                    answer.style.display = 'none';
-                                    viewButton.innerHTML = '+';
-                                }"> + </button></h3> </h3>
+            <h3> Price <button type="button" id="priceView" onclick=<?php echo changeSign('price'); ?>> + </button></h3>
             <div id="priceOptions">
-                <input type="checkbox" name="price0" value="0" class="priceCheckboxes" 
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('price0', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="price0" value="0" class="priceCheckboxes" <?php checked("price0", $prefer);?> >
                 <label for="price0"> Free</label>
                 <br>
 
-                <input type="checkbox" name="priceLow" value="20" class="priceCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('priceLow', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="priceLow" value="20" class="priceCheckboxes" <?php checked("priceLow", $prefer);?>>
                 <label for="priceLow"> $ </label>
                 <br>
 
-                <input type="checkbox" name="priceMid" value="50" class="priceCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('priceMid', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="priceMid" value="50" class="priceCheckboxes" <?php checked("priceMid", $prefer);?>>
                 <label for="priceMid"> $$ </label>
                 <br>
 
-                <input type="checkbox" name="priceHigh" value="1000" class="priceCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('priceHigh', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="priceHigh" value="1000" class="priceCheckboxes" <?php checked("priceHigh", $prefer);?>>
                 <label for="priceHigh"> $$$ </label>
             </div>
 
             <!-- Location Checkboxes -->
-            <h3> Location <button type="button" id="locView" onClick="var answer = document.getElementById('locOptions');
-                                var viewButton = document.getElementById('locView');
-                                let compStyles = window.getComputedStyle(answer);
-                                if (compStyles.display == 'none') {
-                                    answer.style.display = 'block';
-                                    viewButton.innerHTML = '-';
-                                } else if (compStyles.display == 'block') {
-                                    answer.style.display = 'none';
-                                    viewButton.innerHTML = '+';
-                                }"> + </button></h3>
+            <h3> Location <button type="button" id="locView" onClick=<?php echo changeSign('loc'); ?>> + </button></h3>
             <div id="locOptions">
-                <input type="checkbox" name="cityAustin" value="Austin" class="locationCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('cityAustin', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="cityAustin" value="Austin" class="locationCheckboxes" <?php checked("cityAustin", $prefer);?>>
                 <label for="austin"> Austin </label>
                 <br>
 
-                <input type="checkbox" name="cityRoundrock" value="Round Rock" class="locationCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('cityRoundrock', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="cityRoundrock" value="Round Rock" class="locationCheckboxes" <?php checked("cityRoundrock", $prefer);?>>
                 <label for="roundrock"> Round Rock </label>
                 <br>
 
-                <input type="checkbox" name="cityGeorgetown" value="Georgetown" class="locationCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('cityGeorgetown', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="cityGeorgetown" value="Georgetown" class="locationCheckboxes" <?php checked("cityGeorgetown", $prefer);?>>
                 <label for="georgetown"> Georgetown </label>
             </div>
 
             <!-- Environtment Checkboxes -->
-            <h3> Environment <button type="button" id="envtView" onClick="var answer = document.getElementById('envtOptions');
-                                var viewButton = document.getElementById('envtView');
-                                let compStyles = window.getComputedStyle(answer);
-                                if (compStyles.display == 'none') {
-                                    answer.style.display = 'block';
-                                    viewButton.innerHTML = '-';
-                                } else if (compStyles.display == 'block') {
-                                    answer.style.display = 'none';
-                                    viewButton.innerHTML = '+';
-                                }"> + </button></h3>
+            <h3> Environment <button type="button" id="envtView" onClick=<?php echo changeSign('envt'); ?>> + </button></h3>
             <div id="envtOptions">
-                <input type="checkbox" name="envtIndoor" value="Indoor" class="envtCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('envtIndoor', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="envtIndoor" value="Indoor" class="envtCheckboxes" <?php checked("envtIndoor", $prefer);?>>
                 <label for="indoor"> Indoor </label>
                 <br>
 
-                <input type="checkbox" name="envtOutdoor" value="Outdoor" class="envtCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('envtOutdoor', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="envtOutdoor" value="Outdoor" class="envtCheckboxes" <?php checked("envtOutdoor", $prefer);?>>
                 <label for="outdoor"> Outdoor </label>
                 <br>
             </div>
 
             <!-- Type Checkboxes -->
-            <h3> Type <button type="button" id="typeView" onClick="var answer = document.getElementById('typeOptions');
-                                var viewButton = document.getElementById('typeView');
-                                let compStyles = window.getComputedStyle(answer);
-                                if (compStyles.display == 'none') {
-                                    answer.style.display = 'block';
-                                    viewButton.innerHTML = '-';
-                                } else if (compStyles.display == 'block') {
-                                    answer.style.display = 'none';
-                                    viewButton.innerHTML = '+';
-                                }"> + </button></h3>
+            <h3> Type <button type="button" id="typeView" onClick=<?php echo changeSign('type'); ?>> + </button></h3>
             <div id="typeOptions">
-                <input type="checkbox" name="typeHistory" value="history" id="history"class="typeCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('typeHistory', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="typeHistory" value="history" id="history"class="typeCheckboxes"<?php checked("typeHistory", $prefer);?> >
                 <label for="typeHistory"> History </label>
                 <br>
 
-                <input type="checkbox" name="typeMusic" value="music" class="typeCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('typeMusic', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="typeMusic" value="music" class="typeCheckboxes" <?php checked("typeMusic", $prefer);?>>
                 <label for="typeMusic"> Music </label>
                 <br>
 
-                <input type="checkbox" name="typeDining" value="dining" class="typeCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('typeDining', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="typeDining" value="dining" class="typeCheckboxes" <?php checked("typeDining", $prefer);?>>
                 <label for="typeDining"> Dining </label>
                 <br>
 
-                <input type="checkbox" name="typeFamily" value="family" class="typeCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('typeFamily', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="typeFamily" value="family" class="typeCheckboxes" <?php checked("typeFamily", $prefer);?> >
                 <label for="typeFamily"> Family </label>
                 <br>
 
-                <input type="checkbox" name="typeParks" value="parks" class="typeCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('typeParks', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="typeParks" value="parks" class="typeCheckboxes" <?php checked("typeParks", $prefer);?>>
                 <label for="typeParks"> Parks </label>
                 <br>
                 
-                <input type="checkbox" name="typeMisc" value="miscellaneous" class="typeCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('typeMisc', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="typeMisc" value="miscellaneous" class="typeCheckboxes" <?php checked("typeMisc", $prefer);?>>
                 <label for="typeMisc"> Miscellaneous </label>
                 <!-- includes fishing, farming, rodeos, shopping, parks-->
             </div>
 
             <!-- Mask Checkboxes -->
-            <h3> Mask Protocols <button type="button" id="maskView" onClick="var answer = document.getElementById('maskOptions');
-                                var viewButton = document.getElementById('maskView');
-                                let compStyles = window.getComputedStyle(answer);
-                                if (compStyles.display == 'none') {
-                                    answer.style.display = 'block';
-                                    viewButton.innerHTML = '-';
-                                } else if (compStyles.display == 'block') {
-                                    answer.style.display = 'none';
-                                    viewButton.innerHTML = '+';
-                                }"> + </button></h3>
+            <h3> Mask Protocols <button type="button" id="maskView" onClick=<?php echo changeSign('mask'); ?>> + </button></h3>
             <div id="maskOptions">
-                <input type="checkbox" name="maskRequired" value="Required" class="maskCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('maskRequired', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="maskRequired" value="Required" class="maskCheckboxes"<?php checked("maskRequired", $prefer);?>>
                 <label for="required"> Required </label>
                 <br>
 
-                <input type="checkbox" name="maskRecommended" value="Recommended" class="maskCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('maskRecommended', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="maskRecommended" value="Recommended" class="maskCheckboxes" <?php checked("maskRecommended", $prefer);?>>
                 <label for="recommended"> Recommended </label>
                 <br>
 
-                <input type="checkbox" name="maskOptional" value="Optional" id="op" class="maskCheckboxes"
-                    <?php 
-                        if (isset($prefer)) {
-                            if(in_array('maskOptional', $prefer)) {
-                                echo 'checked';
-                            }
-                        }
-                    ?>
-                >
+                <input type="checkbox" name="maskOptional" value="Optional" id="op" class="maskCheckboxes" <?php checked("maskOptional", $prefer);?>>
                 <label for="optional"> Optional </label>
             </div>
 
@@ -393,6 +207,7 @@
         </div>
     </form>
 
+    <!-- Submits Form (Sets results if user is coming from another page) -->
     <?php 
         if($_SERVER["REQUEST_URI"] != "/browseFiles/browse.php") {
             echo '<script type="text/JavaScript">
@@ -401,13 +216,14 @@
         }
     ?>
 
+    <!-- Page Search -->
     <form class="pageSearch" action="browse.php" method="POST">
         <input title="Search by Name, Location, Category, etc." id="searchBar" type="text" name="searchBarPage" placeholder="Search...">
         <button type="submit" id="submitSearchPage" name="submitSearchPage"> &#128269  </button>
     </form>
 
-    <!-- Displays checkboxes if box has been selected -->
     <?php 
+        //  Displays checkboxes if box has been selected when filters are updated
         foreach($prefer as $preference) {
             if (str_contains($preference, "price") == true) {
                 echo "<script type='text/JavaScript'> 
@@ -450,31 +266,19 @@
 
     <!-- Print Initial Results Table -->
     <div id="ogResults">
-        <!-- Query for ALL Results -->
         <?php 
-        // Remove Previous Results
-        echo '<script type="text/JavaScript"> 
-        document.getElementById(\'searchTable\').remove();
-        </script>'
-    ;
-        echo '<script type="text/JavaScript"> 
-        document.getElementById(\'resultsTable\').remove();
-        </script>'
-    ;
+            // Remove Previous Results
+            clearResults();
+            clearSearch();
+
+            // Display all results
             $allQuery = 'SELECT * FROM attractions';
             $results = $conn->query($allQuery);
             while ($rows=($results->fetch_assoc())) {
                 $price = "";
-                if($rows['price'] <=0) {
-                    $price = "Free";
-                } else if ($rows['price'] <=20) {
-                    $price = "$";
-                } else if ($rows['price'] <=50) {            
-                    $price = "$$";
-                } else {
-                    $price = "$$$";
-                }
+                $price = getSymbol($rows['price']);
         ?>
+                <!-- Outputs individual activity block w/ info -->
                 <div onclick="addFave(this)" class="topics">
                     <img title=<?php echo ('"' . $rows["cite"] . '"')?> class="topicImgs" src= <?php echo $rows["img"] ?>>
                     <a href=<?php echo ('"' . $rows['link'] . '"'); ?> target="_blank"> <h4 class="topicTitles" > <?php echo $rows["name"] ?> </h4> </a>
@@ -486,17 +290,13 @@
     </div>
 
     <?php
+        // Checks if user coming from bot links
         if ((($_SERVER["REQUEST_URI"] == "/browseFiles/browse.php?dining") || ($_SERVER["REQUEST_URI"] == "/browseFiles/browse.php?music"))) {
-      // Remove Previous Results
-      echo '<script type="text/JavaScript"> 
-      document.getElementById(\'ogResults\').remove();
-      </script>'
-  ;
-      echo '<script type="text/JavaScript"> 
-      document.getElementById(\'searchTable\').remove();
-      </script>'
-  ;           
+            // Remove Previous Results
+            clearOg();
+            clearSearch();           
         }
+
         // Query statement
         $jointQuery = 'SELECT DISTINCT * FROM attractions WHERE ';
 
@@ -537,33 +337,22 @@
         // Checks if preferences have been set
         if (!empty($prefer)) {
             // Remove Previous Results
-            echo '<script type="text/JavaScript"> 
-                document.getElementById(\'ogResults\').remove();
-                </script>'
-            ;
-            echo '<script type="text/JavaScript"> 
-                document.getElementById(\'searchTable\').remove();
-                </script>'
-            ;
+            clearOg();
+            clearSearch();            
     ?>
         <!-- Filtered Attractions Table -->
-            <div id="resultsTable">
                 <?php 
                     // Filter based query
                     $resultsJQ = $conn->query($jointQuery);
+                ?>
+            <div id="resultsTable">
+                <?php
                     // iterates through results list
                     while ($rowsJQ=($resultsJQ->fetch_assoc())) {
                         $price = "";
-                        if($rowsJQ['price'] <=0) {
-                            $price = "Free";
-                        } else if ($rowsJQ['price'] <=20) {
-                            $price = "$";
-                        } else if ($rowsJQ['price'] <=50) {            
-                            $price = "$$";
-                        } else {
-                            $price = "$$$";
-                        }
+                        $price = getSymbol($rowsJQ['price']);
                 ?>
+                        <!-- Outputs result blocks w/ info -->
                         <div class="topics2">
                             <img title=<?php echo ('"' . $rowsJQ["cite"] . '"')?> class="topicImgs2" src= <?php echo $rowsJQ["img"] ?>>
                             <a href=<?php echo ('"' . $rowsJQ['link'] . '"'); ?> target="_blank"> <h4 class="topicTitles2" > <?php echo $rowsJQ["name"] ?> </h4> </a>
@@ -577,8 +366,11 @@
         }
     ?>
 
-    <!-- Page Search -->
+    <!-- Page Search Functionality -->
     <?php
+        // cleanData($data) created formatted version of parameter, devoid of possible scripting hacks
+        // $data - String (user input)
+        // return{String} - returns a string
         function cleanData($data) {
             $data = trim($data);
             $data = stripslashes($data);
@@ -586,32 +378,28 @@
             return $data;
         }
         if (isset($_POST["submitSearchPage"]) && ($_POST["searchBarPage"] != "")) {
-            // make sure search is not an sql injection, protects tables/database
             $search = $_POST["searchBarPage"];
             $search = cleanData($search);
+            // make sure search is not an sql injection, protects tables/database
             $search = $conn -> real_escape_string($search);
 
-            //  Query for ALL Results
+            //  Query for ALL possible Results
             $searchQuery = 'SELECT DISTINCT * FROM attractions WHERE name like "%' . $search . '%" OR blurb LIKE "%' . $search . '%" OR envt LIKE "%' .$search . '%" OR category LIKE "%' .$search . '%" OR location LIKE "%' .$search . '%"';
             $searchResults = $conn->query($searchQuery);
             $numResults = mysqli_num_rows($searchResults);
 
             // Remove Previous Results
-            echo '<script type="text/JavaScript"> 
-                document.getElementById(\'ogResults\').remove();
-                </script>'
-            ;
-            echo '<script type="text/JavaScript"> 
-                document.getElementById(\'resultsTable\').remove();
-                </script>'
-            ;
+            clearOg();
+            clearResults();
+
             if ($numResults > 1) {
     ?> 
-                <h4 id="numResults"> There are <?php echo $numResults ?> results: </h4>
+                <h4 class="numResults"> There are <?php echo $numResults ?> results: </h4>
     <?php
             } else if ($numResults == 0) {
     ?>
-                <h4 id="numResults"> There are <?php echo $numResults ?> results: </h4>
+                <!-- output for zero results in search -->
+                <h4 class="numResults"> There are <?php echo $numResults ?> results: </h4>
                 <div id="noResults">
                 <p id="helpBlurb"> There were no relavent searches. Try again using unique keywords or check out our sitemap for quick links to all of our content! </p>
                     <ul id="searchTips"> 
@@ -624,54 +412,42 @@
     <?php
             }else {
     ?>
-                <h4  id="numResults"> There is <?php echo $numResults ?> result: </h4>
+                <h4  class="numResults"> There is <?php echo $numResults ?> result: </h4>
     <?php
             }
     ?>
-        <div id="searchTable">
-            <?php
-                // Output results
-                while ($rowsS=($searchResults->fetch_assoc())) {
-                    $price = "";
-                    if($rowsS['price'] <=0) {
-                        $price = "Free";
-                    } else if ($rowsS['price'] <=20) {
-                        $price = "$";
-                    } else if ($rowsS['price'] <=50) {            
-                        $price = "$$";
-                    } else {
-                        $price = "$$$";
+            <div id="searchTable">
+                <?php
+                    // Output results
+                    while ($rowsS=($searchResults->fetch_assoc())) {
+                        $price = "";
+                        $price = getSymbol($rowsS['price']);
+                ?>
+                        <!-- search results block w/ info -->
+                        <div class="topics3">
+                            <img title=<?php echo ('"' . $rowsS["cite"] . '"')?> class="topicImgs3" src= <?php echo $rowsS["img"] ?>>
+                            <a href=<?php echo ('"' . $rowsS['link'] . '"'); ?> target="_blank"> <h4 class="topicTitles3" > <?php echo $rowsS["name"] ?> </h4> </a>
+                            <p class="descrips3"><?php echo $price . " | " . $rowsS['location'] . " | " . $rowsS['envt'] . " | Masks: " . $rowsS['masks'] . " | " . $rowsS['category'] . " | " ?> <a target="_blank" href=<?php echo ('"' . $rowsS['citeLink'] . '"'); ?>> Attribution </a> </p>
+                        </div>     
+                <?php
                     }
-            ?>
-                    <div class="topics3">
-                        <img title=<?php echo ('"' . $rowsS["cite"] . '"')?> class="topicImgs3" src= <?php echo $rowsS["img"] ?>>
-                        <a href=<?php echo ('"' . $rowsS['link'] . '"'); ?> target="_blank"> <h4 class="topicTitles3" > <?php echo $rowsS["name"] ?> </h4> </a>
-                        <p class="descrips3"><?php echo $price . " | " . $rowsS['location'] . " | " . $rowsS['envt'] . " | Masks: " . $rowsS['masks'] . " | " . $rowsS['category'] . " | " ?> <a target="_blank" href=<?php echo ('"' . $rowsS['citeLink'] . '"'); ?>> Attribution </a> </p>
-                    </div>     
-            <?php
-                }
-            ?>
-        </div>
+                ?>
+            </div>
     <?php
+            // keeps search value displayed after user hits enter
             echo "<script type='text/JavaScript'>
-            var searchBar = document.getElementById('searchBar');
-            searchBar.value='" . $search . "'
-        </script>";
+                var searchBar = document.getElementById('searchBar');
+                searchBar.value='" . $search . "'
+            </script>";
         } else {
-            echo '<script type="text/JavaScript"> 
-                document.getElementById(\'noResults\').remove();
-                </script>'
-            ;
+            clearNoResults();
         }
     ?>
 
     <!-- Clear Search Tips if not needed -->
     <?php
         if(isset($_POST['clear']) && ($_POST['clear'] == "clear")) {
-            echo '<script type="text/JavaScript"> 
-                document.getElementById(\'noResults\').remove();
-                </script>'
-            ;
+            clearNoResults();
         } 
     ?>
 
@@ -681,8 +457,101 @@
     <?php
         // establishing connection
         include "../footer.php";
+
+        // changeSign($start)
+        // @desc displays filter section if respective checkbox selected
+        // @param {String} div name
+        // @return {String} prints "checked", changes style of attribute section 
+        function changeSign($start) {
+            echo '"let filterId = `' . $start . 'Options`;
+            let viewButtonId = `' . $start . 'View`;
+            console.log(`function is doing the job`);
+            let filter = document.getElementById(filterId);
+            let viewButton = document.getElementById(viewButtonId);
+            let compStyles = window.getComputedStyle(filter);
+            if (compStyles.display == `none`) {
+                filter.style.display = `block`;
+                viewButton.innerHTML = `-`;
+            } else if (compStyles.display == `block`) {
+                filter.style.display = `none`;
+                viewButton.innerHTML = `+`;
+            }"';
+        }
+
+        // checked($name, $prefer)
+        // @desc makes sure selected checkboxes remain checked on update
+        // @param {String} input name
+        // @param {Array} list of user selected checkboxes
+        // @return {String} prints "checked", changes style of attribute section 
+        function checked($name, $prefer) {
+            foreach($prefer as $preference) {
+                if($preference == $name) {
+                echo "checked";
+                }
+            }
+        }
+
+        // getSymbol($price)
+        // @descrip returns appropriate price symbol
+        // @param {Integer} cost of event
+        // @return {String} symbol relative to price
+        function getSymbol($price) {
+            $symbol = "";
+            if($price <=0) {
+                $symbol = "Free";
+            } else if ($price <=20) {
+                $symbol = "$";
+            } else if ($price <=50) {            
+                $symbol = "$$";
+            } else {
+                $symbol = "$$$";
+            }
+            return $symbol;
+        }
+
+        // clearSearch() 
+        // @descrip clears any search results
+        function clearSearch() {
+            echo '<script type="text/JavaScript"> 
+                var searchTable = document.getElementById(\'searchTable\');
+                if (searchTable != null) {
+                    searchTable.remove();
+                }
+            </script>';
+        }
+
+        // clearOg()
+        // @descrip clears any original results
+        function clearOg() {
+            echo '<script type="text/JavaScript"> 
+                var ogTable = document.getElementById(\'ogResults\');
+                if (ogTable != null) {
+                    ogTable.remove();
+                }
+            </script>';
+        }
+
+        // clearResults()
+        // @descrip clears any filtered results
+        function clearResults() {
+            echo '<script type="text/JavaScript"> 
+                var resultsTable = document.getElementById(\'resultsTable\')
+                if (resultsTable != null) {
+                    resultsTable.remove();
+                }
+            </script>';
+        }
+
+        // clearNoResults()
+        // @descrip clears search advice
+        function clearNoResults() {
+            echo '<script type="text/JavaScript"> 
+                var noResults = document.getElementById(\'noResults\');
+                if (noResults != null) {
+                    noResults.remove();
+                }
+            </script>';
+        }
     ?>
 </body>
 </html>
- 
-
