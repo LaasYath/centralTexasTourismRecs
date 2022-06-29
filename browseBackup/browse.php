@@ -44,34 +44,52 @@
         'maskRequired', 'maskRecommended', 'maskOptional');
 
         // list of checked boxes
-        $prefer = array();
+        $priceA = array();
+        $loc = array();
+        $type = array();
+        $envt = array();
+        $mask = array();
 
         // Adds checked boxes to seperate list ($prefer)
         foreach($boxes as $box) {
             if(isset($_POST[$box])) {
-                array_push($prefer, $box);
+                if (str_contains($box, "price")) {
+                    array_push($priceA, $box);
+                } else if (str_contains($box, "city")) {
+                    array_push($loc, $box);
+                } else if (str_contains($box, "envt")) {
+                    array_push($envt, $box);
+                } else if (str_contains($box, "type")) {
+                    array_push($type, $box);
+                } else if (str_contains($box, "mask")) {
+                    array_push($mask, $box);
+                }
             }
         }
 
         // Checks if user has been redirected by bot or from blurbs on home page, displays appropriate results
         if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?dining") {
-            array_push($prefer, "typeDining");
+            array_push($type, "typeDining");
         } else if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?music") {
-            array_push($prefer, "typeMusic");
+            array_push($type, "typeMusic");
         } else if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?history") {
-            array_push($prefer, "typeHistory");
+            array_push($type, "typeHistory");
         } else if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?outdoors") {
-            array_push($prefer, "envtOutdoor");
+            array_push($preenvtfer, "envtOutdoor");
         } else if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?miscellaneous") {
-            array_push($prefer, "typeMisc");
+            array_push($type, "typeMisc");
         } else if($_SERVER['REQUEST_URI'] == "/browseFiles/browse.php?family") {
-            array_push($prefer, "typeFamily");
+            array_push($type, "typeFamily");
         }
 
 
         // Clear Preferences
         if(isset($_POST['clear']) && ($_POST['clear'] == "clear")) {
-            $prefer = array();
+            $priceA = array();
+            $loc = array();
+            $type = array();
+            $envt = array();
+            $mask = array();
         }
         
     ?>
@@ -110,45 +128,45 @@
             <!-- Price Checkboxes -->
             <h3> Price <button type="button" id="priceView" onclick=<?php echo changeSign('price'); ?>> + </button></h3>
             <div id="priceOptions">
-                <input type="checkbox" name="price0" value="0" class="priceCheckboxes" <?php checked("price0", $prefer);?> >
+                <input type="checkbox" name="price0" value="0" class="priceCheckboxes" <?php checked("price0", $priceA);?> >
                 <label for="price0"> Free</label>
                 <br>
 
-                <input type="checkbox" name="priceLow" value="20" class="priceCheckboxes" <?php checked("priceLow", $prefer);?>>
+                <input type="checkbox" name="priceLow" value="20" class="priceCheckboxes" <?php checked("priceLow", $priceA);?>>
                 <label for="priceLow"> $ </label>
                 <br>
 
-                <input type="checkbox" name="priceMid" value="50" class="priceCheckboxes" <?php checked("priceMid", $prefer);?>>
+                <input type="checkbox" name="priceMid" value="50" class="priceCheckboxes" <?php checked("priceMid", $priceA);?>>
                 <label for="priceMid"> $$ </label>
                 <br>
 
-                <input type="checkbox" name="priceHigh" value="1000" class="priceCheckboxes" <?php checked("priceHigh", $prefer);?>>
+                <input type="checkbox" name="priceHigh" value="1000" class="priceCheckboxes" <?php checked("priceHigh", $priceA);?>>
                 <label for="priceHigh"> $$$ </label>
             </div>
 
             <!-- Location Checkboxes -->
             <h3> Location <button type="button" id="locView" onClick=<?php echo changeSign('loc'); ?>> + </button></h3>
             <div id="locOptions">
-                <input type="checkbox" name="cityAustin" value="Austin" class="locationCheckboxes" <?php checked("cityAustin", $prefer);?>>
+                <input type="checkbox" name="cityAustin" value="Austin" class="locationCheckboxes" <?php checked("cityAustin", $loc);?>>
                 <label for="austin"> Austin </label>
                 <br>
 
-                <input type="checkbox" name="cityRoundrock" value="Round Rock" class="locationCheckboxes" <?php checked("cityRoundrock", $prefer);?>>
+                <input type="checkbox" name="cityRoundrock" value="Round Rock" class="locationCheckboxes" <?php checked("cityRoundrock", $loc);?>>
                 <label for="roundrock"> Round Rock </label>
                 <br>
 
-                <input type="checkbox" name="cityGeorgetown" value="Georgetown" class="locationCheckboxes" <?php checked("cityGeorgetown", $prefer);?>>
+                <input type="checkbox" name="cityGeorgetown" value="Georgetown" class="locationCheckboxes" <?php checked("cityGeorgetown", $loc);?>>
                 <label for="georgetown"> Georgetown </label>
             </div>
 
             <!-- Environtment Checkboxes -->
             <h3> Environment <button type="button" id="envtView" onClick=<?php echo changeSign('envt'); ?>> + </button></h3>
             <div id="envtOptions">
-                <input type="checkbox" name="envtIndoor" value="Indoor" class="envtCheckboxes" <?php checked("envtIndoor", $prefer);?>>
+                <input type="checkbox" name="envtIndoor" value="Indoor" class="envtCheckboxes" <?php checked("envtIndoor", $envt);?>>
                 <label for="indoor"> Indoor </label>
                 <br>
 
-                <input type="checkbox" name="envtOutdoor" value="Outdoor" class="envtCheckboxes" <?php checked("envtOutdoor", $prefer);?>>
+                <input type="checkbox" name="envtOutdoor" value="Outdoor" class="envtCheckboxes" <?php checked("envtOutdoor", $envt);?>>
                 <label for="outdoor"> Outdoor </label>
                 <br>
             </div>
@@ -156,27 +174,27 @@
             <!-- Type Checkboxes -->
             <h3> Type <button type="button" id="typeView" onClick=<?php echo changeSign('type'); ?>> + </button></h3>
             <div id="typeOptions">
-                <input type="checkbox" name="typeHistory" value="history" id="history"class="typeCheckboxes"<?php checked("typeHistory", $prefer);?> >
+                <input type="checkbox" name="typeHistory" value="history" id="history"class="typeCheckboxes"<?php checked("typeHistory", $type);?> >
                 <label for="typeHistory"> History </label>
                 <br>
 
-                <input type="checkbox" name="typeMusic" value="music" class="typeCheckboxes" <?php checked("typeMusic", $prefer);?>>
+                <input type="checkbox" name="typeMusic" value="music" class="typeCheckboxes" <?php checked("typeMusic", $type);?>>
                 <label for="typeMusic"> Music </label>
                 <br>
 
-                <input type="checkbox" name="typeDining" value="dining" class="typeCheckboxes" <?php checked("typeDining", $prefer);?>>
+                <input type="checkbox" name="typeDining" value="dining" class="typeCheckboxes" <?php checked("typeDining", $type);?>>
                 <label for="typeDining"> Dining </label>
                 <br>
 
-                <input type="checkbox" name="typeFamily" value="family" class="typeCheckboxes" <?php checked("typeFamily", $prefer);?> >
+                <input type="checkbox" name="typeFamily" value="family" class="typeCheckboxes" <?php checked("typeFamily", $type);?> >
                 <label for="typeFamily"> Family </label>
                 <br>
 
-                <input type="checkbox" name="typeParks" value="parks" class="typeCheckboxes" <?php checked("typeParks", $prefer);?>>
+                <input type="checkbox" name="typeParks" value="parks" class="typeCheckboxes" <?php checked("typeParks", $type);?>>
                 <label for="typeParks"> Parks </label>
                 <br>
                 
-                <input type="checkbox" name="typeMisc" value="miscellaneous" class="typeCheckboxes" <?php checked("typeMisc", $prefer);?>>
+                <input type="checkbox" name="typeMisc" value="miscellaneous" class="typeCheckboxes" <?php checked("typeMisc", $type);?>>
                 <label for="typeMisc"> Miscellaneous </label>
                 <!-- includes fishing, farming, rodeos, shopping, parks-->
             </div>
@@ -184,15 +202,15 @@
             <!-- Mask Checkboxes -->
             <h3> Mask Protocols <button type="button" id="maskView" onClick=<?php echo changeSign('mask'); ?>> + </button></h3>
             <div id="maskOptions">
-                <input type="checkbox" name="maskRequired" value="Required" class="maskCheckboxes"<?php checked("maskRequired", $prefer);?>>
+                <input type="checkbox" name="maskRequired" value="Required" class="maskCheckboxes"<?php checked("maskRequired", $mask);?>>
                 <label for="required"> Required </label>
                 <br>
 
-                <input type="checkbox" name="maskRecommended" value="Recommended" class="maskCheckboxes" <?php checked("maskRecommended", $prefer);?>>
+                <input type="checkbox" name="maskRecommended" value="Recommended" class="maskCheckboxes" <?php checked("maskRecommended", $mask);?>>
                 <label for="recommended"> Recommended </label>
                 <br>
 
-                <input type="checkbox" name="maskOptional" value="Optional" id="op" class="maskCheckboxes" <?php checked("maskOptional", $prefer);?>>
+                <input type="checkbox" name="maskOptional" value="Optional" id="op" class="maskCheckboxes" <?php checked("maskOptional", $mask);?>>
                 <label for="optional"> Optional </label>
             </div>
 
@@ -224,36 +242,35 @@
 
     <?php 
         //  Displays checkboxes if box has been selected when filters are updated
-        foreach($prefer as $preference) {
-            if (str_contains($preference, "price") == true) {
+            if (count($priceA) > 0) {
                 echo "<script type='text/JavaScript'> 
                     var answer = document.getElementById('priceOptions');
                     answer.style.display = 'block';
                     var viewButton = document.getElementById('priceView');
                     viewButton.innerHTML = '-';
                 </script>";
-            } else if (str_contains($preference, "city") == true) {
+            } if (count($loc) > 0) {
                 echo "<script type='text/JavaScript'> 
                     var answer = document.getElementById('locOptions');
                     answer.style.display = 'block';
                     var viewButton = document.getElementById('locView');
                     viewButton.innerHTML = '-';
                 </script>";
-            } else if (str_contains($preference, "envt") == true) {
+            } if (count($envt) > 0) {
                 echo "<script type='text/JavaScript'> 
                     var answer = document.getElementById('envtOptions');
                     answer.style.display = 'block';
                     var viewButton = document.getElementById('envtView');
                     viewButton.innerHTML = '-';
                 </script>";
-            } else if (str_contains($preference, "type") == true) {
+            } if (count($type) > 0) {
                 echo "<script type='text/JavaScript'> 
                     var answer = document.getElementById('typeOptions');
                     answer.style.display = 'block';
                     var viewButton = document.getElementById('typeView');
                     viewButton.innerHTML = '-';
                 </script>";
-            } else if (str_contains($preference, "mask") == true) {
+            } if (count($mask) > 0) {
                 echo "<script type='text/JavaScript'> 
                     var answer = document.getElementById('maskOptions');
                     answer.style.display = 'block';
@@ -261,7 +278,6 @@
                     viewButton.innerHTML = '-';
                 </script>";
             }
-        }
     ?>
 
     <!-- Print Initial Results Table -->
@@ -279,7 +295,7 @@
                 $price = getSymbol($rows['price']);
         ?>
                 <!-- Outputs individual activity block w/ info -->
-                <div onclick="addFave(this)" class="topics">
+                <div class="topics">
                     <img title=<?php echo ('"' . $rows["cite"] . '"')?> class="topicImgs" src= <?php echo $rows["img"] ?>>
                     <a href=<?php echo ('"' . $rows['link'] . '"'); ?> target="_blank"> <h4 class="topicTitles" > <?php echo $rows["name"] ?> </h4> </a>
                     <p class="descrips"> <?php echo $price . " | " . $rows['location'] . " | " . $rows['envt'] . " | " . $rows['category'] . " | "?> <a target="_blank" href=<?php echo ('"' . $rows['citeLink'] . '"'); ?>> Attribution </a> </p>
@@ -298,50 +314,102 @@
         }
 
         // Query statement
-        $jointQuery = 'SELECT DISTINCT * FROM attractions WHERE ';
+        $jointQuery = 'SELECT DISTINCT * FROM attractions WHERE ';    
 
-        // Adds to query for each preference
-        foreach ($prefer as $preference) {
-            // checks if this is the last preference
-            if ( ($_POST[$prefer[count($prefer)-1]]) == ($_POST[$preference]) ) {
-                // checks to see which where clause we need to query by
-                if( str_contains($preference, "price") == true ) {
-                    $jointQuery = $jointQuery . 'price<=' . $_POST[$preference];
-                } else if ( str_contains($preference, "city") == true )  {
-                    $jointQuery = $jointQuery . 'location="' . $_POST[$preference] . '"';
-                } else if ( str_contains($preference, "envt") == true ) {
-                    $jointQuery = $jointQuery . 'envt like "%' . $_POST[$preference] . '%"';
-                } else if ( str_contains($preference, "type") == true ) {
-                    $jointQuery = $jointQuery . 'category like "%' . $_POST[$preference] . '%"';
-                } else if ( str_contains($preference, "mask") == true ) {
-                    $jointQuery = $jointQuery . 'masks="' . $_POST[$preference] . '"';
-                } 
+        $all = array($priceA, $loc, $type, $envt, $mask);
+        $index = 0;
+        foreach ($priceA as $attPrice) {
+            if ($priceA[0] == $attPrice && count($priceA) != 1) {
+                $jointQuery = $jointQuery . ' (price <= ' . $_POST[$attPrice] . ' OR ';
+            } else if ($priceA[count($priceA) - 1] != $attPrice) {
+                $jointQuery = $jointQuery . ' price <= ' . $_POST[$attPrice] . ' OR ';
             } else {
-                // checks to see which where clause we need to query by
-                if( str_contains($preference, "price") == true ) {
-                    $jointQuery = $jointQuery . 'price<=' . $_POST[$preference] . ' OR ';
-                } else if ( str_contains($preference, "city") == true ) {
-                    $jointQuery = $jointQuery . 'location="' . $_POST[$preference] . '" OR ';
-                } else if ( str_contains($preference, "envt") == true ) {
-                    $jointQuery = $jointQuery . 'envt like "%' . $_POST[$preference] . '%" OR ';
-                } else if ( str_contains($preference, "type") == true ) {
-                    $jointQuery = $jointQuery . 'category like "%' . $_POST[$preference] . '%" OR ';
-                } else if ( str_contains($preference, "mask") == true ) {
-                    $jointQuery = $jointQuery . 'masks="' . $_POST[$preference] . '" OR ';
+                if (count($priceA) == 1) {
+                    $jointQuery = $jointQuery . '(price <= ' . $_POST[$attPrice] . ')';
+                } else {
+                    $jointQuery = $jointQuery . ' price <= ' . $_POST[$attPrice] . ')';
+                }
+                if (count($all[$index + 1]) != 0 || count($all[$index + 2]) != 0 || count($all[$index + 3]) != 0 || count($all[$index + 4]) != 0) {
+                    $jointQuery = $jointQuery . ' AND ';
                 }
             }
         }
+        $index += 1;
+        foreach ($loc as $attLoc) {
+            if ($loc[0] == $attLoc && count($loc) != 1) {
+                $jointQuery = $jointQuery . ' (location like "%' . $_POST[$attLoc] . '%" OR ';
+            } else if ($loc[count($loc) - 1] != $attLoc) {
+                $jointQuery = $jointQuery . ' location like "%' . $_POST[$attLoc] . '%" OR ';
+            } else {
+                if (count($loc) == 1) {
+                    $jointQuery = $jointQuery . '(location like "%' . $_POST[$attLoc] . '%")';
+                } else {
+                    $jointQuery = $jointQuery . ' location like "%' . $_POST[$attLoc] . '%")';
+                }
+                if (count($all[$index + 1]) != 0 || count($all[$index + 2]) != 0 || count($all[$index + 3])) {
+                    $jointQuery = $jointQuery . ' AND ';
+                }
+            }
+        }
+        $index += 1;
+        foreach ($type as $attType) {
+            if ($type[0] == $attType && count($type) != 1) {
+                $jointQuery = $jointQuery . ' (category like "%' . $_POST[$attType] . '%" OR ';
+            } else if ($type[count($type) - 1] != $attType) {
+                $jointQuery = $jointQuery . ' category like "%' . $_POST[$attType] . '%" OR ';
+            } else {
+                if (count($type) == 1) {
+                    $jointQuery = $jointQuery . '(category like "%' . $_POST[$attType] . '%")';
+                } else {
+                    $jointQuery = $jointQuery . ' category like "% ' . $_POST[$attType] . '%")';
+                }
+                if (count($all[$index + 1]) != 0 || count($all[$index + 2]) != 0) {
+                    $jointQuery = $jointQuery . ' AND ';
+                }
+            }
+        }
+        $index += 1;
+        foreach ($envt as $attEnvt) {
+            if ($envt[0] == $attEnvt && count($envt) != 1) {
+                $jointQuery = $jointQuery . ' (envt like "%' . $_POST[$attEnvt] . '%" OR ';
+            } else if ($envt[count($envt) - 1] != $attEnvt) {
+                $jointQuery = $jointQuery . ' envt like "%' . $_POST[$attEnvt] . '%" OR ';
+            } else {
+                if (count($envt) == 1) {
+                    $jointQuery = $jointQuery . '(envt like "%' . $_POST[$attEnvt] . '%")';
+                } else {
+                    $jointQuery = $jointQuery . ' envt like "% ' . $_POST[$attEnvt] . '%")';
+                }
+                if (count($all[$index + 1]) != 0) {
+                    $jointQuery = $jointQuery . ' AND ';
+                }
+            }
+        }
+        $index += 1;
+        foreach ($mask as $attMask) {
+            if ($mask[0] == $attMask && count($mask) != 1) {
+                $jointQuery = $jointQuery . ' (masks = "' . $_POST[$attMask] . '" OR ';
+            } else if ($mask[count($mask) - 1] != $attMask) {
+                $jointQuery = $jointQuery . ' masks = "' . $_POST[$attMask] . '" OR ';
+            } else {
+                if (count($mask) == 1) {
+                    $jointQuery = $jointQuery . '(masks = "' . $_POST[$attMask] . '")';
+                } else {
+                    $jointQuery = $jointQuery . ' masks = "' . $_POST[$attMask] . '")';
+                }
+            }
+        }
+
     ?> 
 
     <?php 
         // Checks if preferences have been set
-        if (!empty($prefer)) {
+        if (!empty($priceA) || !empty($loc) || !empty($envt) || !empty($type) || !empty($mask)) {
             // Remove Previous Results
             clearOg();
             clearSearch();            
-    ?>
-        <!-- Filtered Attractions Table -->
-                <?php 
+ 
+
                     // Filter based query
                     $resultsJQ = $conn->query($jointQuery);
                 ?>
@@ -363,6 +431,14 @@
                 ?>
             </div>
     <?php
+            $numResults = mysqli_num_rows($resultsJQ);
+            if ($numResults == 0) {
+    ?>
+                <div> 
+                    <h4> There are 0 activities that fit your criteria. Please continue browsing! </h4>
+                </div>
+    <?php
+            }
         }
     ?>
 
@@ -555,3 +631,5 @@
     ?>
 </body>
 </html>
+ 
+
