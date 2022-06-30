@@ -154,6 +154,7 @@ This Bar exists at the bottom of all the pages in the website. It contains links
 
 ## Languages, Tools, & Softwares Used
 - Visual Studio Code
+- Task Scheduler
 - Node.js
 - MAMP
 - phpMyAdmin
